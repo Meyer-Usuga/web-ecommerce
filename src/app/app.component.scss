@@ -1,0 +1,5 @@
+@use "utils";
+
+.example {
+  font-size: utils.pxToRem(100px);
+}
