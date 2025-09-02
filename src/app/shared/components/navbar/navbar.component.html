@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <div class="navbar__list">
+    <img
+      #toggle
+      src="toggle.svg"
+      alt="Web toggle"
+      class="navbar__toggle"
+      [class.hide]="stateSidebar()"
+      aria-label="Abrir menú"
+      (click)="toggleSidebar()"
+    />
+
+    <ul class="navbar__items">
+      <li>Home</li>
+      <li>Collections</li>
+      <li>New</li>
+    </ul>
+  </div>
+
+  <div class="navbar__buttons">
+    <app-button icon="favorite.svg" type="primary" />
+    <app-button text="Cart" type="primary" [styles]="cartButtonStyles" />
+    <app-button icon="user.svg" type="primary" />
+  </div>
+</nav>
+
+<app-sidebar
+  [openSidebar]="stateSidebar()"
+  (closeSidebar)="stateSidebar.set(false)"
+/>

@@ -1,0 +1,13 @@
+<button [class]="'button '+type() " [ngStyle]="styles()">
+  @if(icon() && icon() !== ""){
+  <img 
+    [src]="icon()" 
+    alt="Web icon" 
+    height="15px"
+    width="15px" 
+  />
+  }
+  @else {
+  {{ text() }}
+  }
+</button>

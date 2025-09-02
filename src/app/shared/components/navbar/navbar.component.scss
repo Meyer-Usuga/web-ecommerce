@@ -1,0 +1,42 @@
+@use "utils";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  margin-top: utils.pxToRem(16px);
+
+  &__toggle {
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__items {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: utils.pxToRem(32px);
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: utils.pxToRem(24px);
+  }
+
+  @include utils.media-ltmd() {
+    &__items,
+    &__buttons {
+      display: none;
+    }
+  }
+}

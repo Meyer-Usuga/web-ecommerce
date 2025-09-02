@@ -1,0 +1,45 @@
+@use "utils";
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 20;
+  padding: utils.pxToRem(16px);
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(24px);
+  left: utils.pxToRem(-350px);
+  width: utils.pxToRem(300px);
+  background-color: utils.$color-bg;
+  transition: left 0.3s ease;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+
+  &__header {
+    display: flex;
+    padding-left: utils.pxToRem(16px);
+    justify-content: space-between;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    text-align: end;
+    color: utils.$color-white;
+    font-size: utils.pxToRem(20px);
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: utils.pxToRem(24px);
+    list-style: none;
+    padding: utils.pxToRem(16px);
+    color: utils.$color-white;
+    font-size: utils.pxToRem(30px);
+  }
+
+  &--open {
+    left: 0;
+  }
+}
