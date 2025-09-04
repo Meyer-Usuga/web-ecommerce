@@ -1,0 +1,21 @@
+<article class="product">
+  <div class="product__image">
+    <img [src]="product().imageUrl" [alt]="product().alt" />
+    <button [class.isActive]="showAddButton()">+</button>
+  </div>
+
+  @if(product().description){
+  <div class="product__detail">
+    @let description = product().description;
+
+    <div class="description">
+      <p>{{ description?.title }}</p>
+    </div>
+
+    <div class="price">
+      <h5>{{ description?.subtitle }}</h5>
+      <b>${{ description?.price }}</b>
+    </div>
+  </div>
+  }
+</article>

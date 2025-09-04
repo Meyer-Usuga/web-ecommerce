@@ -1,0 +1,12 @@
+<section class="carousel">
+  <div class="carousel__items" (scroll)="checkButtons(carousel)" #carousel>
+    @for(product of products; track product){
+    <app-product [product]="product" [showAddButton]="true" />
+    }
+  </div>
+
+  <div class="carousel__buttons">
+    <button (click)="prev(carousel)" [disabled]="isAtStart()">PREV</button>
+    <button (click)="next(carousel)" [disabled]="isAtEnd()">NEXT</button>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+@use "utils";
+
+.product {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: utils.pxToRem(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: utils.pxToRem(8px);
+    justify-items: flex-start;
+    width: 100%;
+    margin-top: utils.pxToRem(8px);
+
+    .description,
+    .price {
+      width: 100%;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__image {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    button {
+      position: absolute;
+      bottom: 1%;
+      right: 45%;
+      padding: utils.pxToRem(6px) utils.pxToRem(12px);
+      display: none;
+
+      &.isActive {
+        display: block;
+      }
+    }
+  }
+}
