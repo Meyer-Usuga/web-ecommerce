@@ -3,6 +3,7 @@
 .home {
   display: grid;
   gap: utils.pxToRem(32px);
+  @include utils.container();
 
   &__new-collections {
     display: grid;
@@ -66,8 +67,9 @@
     display: grid;
     grid-template-columns: repeat(3, 400px);
     grid-template-rows: 1fr 1fr 1fr;
-    gap: pxToRem(16px);
-    row-gap: pxToRem(68px);
+    gap: utils.pxToRem(16px);
+    row-gap: utils.pxToRem(68px);
+    margin-bottom: utils.pxToRem(120px);
     justify-content: center;
     justify-items: center;
     grid-auto-flow: row;

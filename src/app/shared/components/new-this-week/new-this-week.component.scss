@@ -1,0 +1,7 @@
+@use "utils";
+
+.new-this-week {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(16px);
+}

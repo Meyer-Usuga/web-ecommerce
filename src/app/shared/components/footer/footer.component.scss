@@ -1,0 +1,20 @@
+@use "utils";
+
+.footer {
+  background-color: utils.$color-white;
+
+  &__wrapper {
+    display: grid;
+    align-items: center;
+    height: 50vh;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr auto;
+    @include utils.container();
+  }
+
+  .list {
+    ul {
+      padding: 0;
+    }
+  }
+}
