@@ -1,0 +1,43 @@
+@use "utils";
+
+.collections {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(16px);
+  width: 100%;
+
+  .filters {
+    list-style: none;
+    display: flex;
+    gap: utils.pxToRem(32px);
+
+    li {
+      color: utils.$color-gray-light;
+      font-weight: 500;
+
+      &.active {
+        color: utils.$color-bg;
+      }
+    }
+
+    li:hover {
+      color: utils.$color-bg;
+    }
+  }
+
+  &__products {
+    display: grid;
+    gap: utils.pxToRem(32px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      color: utils.$color-gray-light;
+    }
+  }
+}

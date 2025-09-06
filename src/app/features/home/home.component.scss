@@ -5,53 +5,10 @@
   gap: utils.pxToRem(32px);
   @include utils.container();
 
-  &__new-collections {
-    display: grid;
-    gap: utils.pxToRem(32px);
-    grid-template-columns: 1.5fr 1fr 1fr;
-  }
-
-  &__new-in-week {
-    display: grid;
-    gap: utils.pxToRem(16px);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  &__current-collections {
+  &__categories {
     display: flex;
     flex-direction: column;
-    gap: utils.pxToRem(16px);
-    width: 100%;
-
-    .filters {
-      list-style: none;
-      display: flex;
-      gap: utils.pxToRem(32px);
-
-      li {
-        color: utils.$color-gray-light;
-
-        &.active {
-          color: utils.$color-bg;
-        }
-      }
-    }
-
-    .products {
-      display: grid;
-      gap: utils.pxToRem(32px);
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .more {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      p {
-        color: utils.$color-gray-light;
-      }
-    }
+    gap: utils.pxToRem(12px);
   }
 
   &__banner {

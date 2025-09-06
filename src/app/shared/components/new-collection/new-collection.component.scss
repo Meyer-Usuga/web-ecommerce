@@ -1,0 +1,7 @@
+@use "utils";
+
+.new-collection {
+  display: grid;
+  gap: utils.pxToRem(32px);
+  grid-template-columns: 1.5fr 1fr 1fr;
+}

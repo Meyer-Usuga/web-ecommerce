@@ -2,108 +2,18 @@
 
 <main class="home">
   <section class="home__categories">
-    <h3>HOMBRES</h3>
-    <h3>MUJERES</h3>
-    <h3>NIÑOS</h3>
+    <p>HOMBRES</p>
+    <p>MUJERES</p>
+    <p>NIÑOS</p>
   </section>
 
   <app-search-input />
 
-  <section class="home__new-collections">
-    <div class="card__header">
-      <div class="card__titles">
-        <h1>NUEVA</h1>
-        <h1>COLECCIÓN</h1>
-        <p>Verano</p>
-        <p>2025</p>
-      </div>
-
-      <div class="card__buttons">
-        <button>Ir a comprar</button>
-        <button>Anterior</button>
-        <button>Siguiente</button>
-      </div>
-    </div>
-
-    <app-product
-      [product]="{
-        imageUrl:
-          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756780846/product2_ydoqcc.png',
-        alt: 'Nuevo producto de colección'
-      }"
-    />
-
-    <app-product
-      [product]="{
-        imageUrl:
-          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
-        alt: 'Nuevo producto de colección'
-      }"
-    />
-  </section>
+  <app-new-collection />
 
   <app-new-this-week />
 
-  <section class="home__current-collections">
-    <h1>XIV</h1>
-    <h1>COLECCIONES</h1>
-    <h1>24-25</h1>
-    <div class="tab">
-      <ul class="filters">
-        <li class="active">TODO</li>
-        <li>Hombre</li>
-        <li>Mujer</li>
-        <li>NIÑO</li>
-      </ul>
-      <hr />
-    </div>
-
-    <div class="products">
-      <app-product
-        [product]="{
-          imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
-          alt: 'Nuevo producto de colección',
-          description: {
-            title: 'V-Neck T-Shirt',
-            subtitle: 'Embroidered Seersucker Shirt',
-            price: '99',
-          },
-        }"
-      />
-
-      <app-product
-        [product]="{
-          imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
-          alt: 'Nuevo producto de colección',
-          description: {
-            title: 'V-Neck T-Shirt',
-            subtitle: 'Embroidered Seersucker Shirt',
-            price: '99',
-          },
-        }"
-      />
-
-      <app-product
-        [product]="{
-          imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
-          alt: 'Nuevo producto de colección',
-          description: {
-            title: 'V-Neck T-Shirt',
-            subtitle: 'Embroidered Seersucker Shirt',
-            price: '99',
-          },
-        }"
-      />
-    </div>
-
-    <div class="more">
-      <p>Ver más</p>
-      <span>↓</span>
-    </div>
-  </section>
+  <app-collections />
 
   <section class="home__banner">
     <h1>NUESTRO ENFOQUE DEL DISEÑO DE MODA</h1>

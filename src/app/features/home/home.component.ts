@@ -5,6 +5,8 @@ import { NavbarComponent } from '@shared/navbar';
 import { ProductComponent } from '@shared/product';
 import { SearchInputComponent } from '@shared/search-input';
 import { NewThisWeekComponent } from '@shared/new-this-week';
+import { CollectionsComponent } from '@shared/collections';
+import { NewCollectionComponent } from '@shared/new-collection';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +14,10 @@ import { NewThisWeekComponent } from '@shared/new-this-week';
   imports: [
     NavbarComponent,
     SearchInputComponent,
-    ProductComponent,
     FooterComponent,
+    CollectionsComponent,
     NewThisWeekComponent,
+    NewCollectionComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -1,0 +1,25 @@
+<section class="collections">
+  <h1>XIV</h1>
+  <h1>COLECCIONES</h1>
+  <h1>24-25</h1>
+  <div class="collections__tab">
+    <ul class="filters">
+      <li class="active">TODO</li>
+      <li>Hombre</li>
+      <li>Mujer</li>
+      <li>Niño</li>
+    </ul>
+    <hr />
+  </div>
+
+  <div class="collections__products">
+    @for(collection of collections; track collection){
+    <app-product [product]="collection.featured" />
+    }
+  </div>
+
+  <div class="more">
+    <p>Ver más</p>
+    <span>↓</span>
+  </div>
+</section>
