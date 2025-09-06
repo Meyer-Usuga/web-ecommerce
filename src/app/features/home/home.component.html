@@ -1,0 +1,141 @@
+<app-navbar />
+
+<main class="home">
+  <section class="home__categories">
+    <h3>MEN</h3>
+    <h3>WOMEN</h3>
+    <h3>KIDS</h3>
+  </section>
+
+  <app-search-input />
+
+  <section class="home__new-collections">
+    <div class="card__header">
+      <div class="card__titles">
+        <h1>NEW</h1>
+        <h1>COLLECTION</h1>
+        <p>Summer</p>
+        <p>2025</p>
+      </div>
+
+      <div class="card__buttons">
+        <button>Go to Shop</button>
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
+    </div>
+
+    <app-product
+      [product]="{
+        imageUrl:
+          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756780846/product2_ydoqcc.png',
+        alt: 'Nuevo producto de colección'
+      }"
+    />
+
+    <app-product
+      [product]="{
+        imageUrl:
+          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+        alt: 'Nuevo producto de colección'
+      }"
+    />
+  </section>
+
+  <section class="home__carousel">
+    <h1>NEW</h1>
+    <h1>THIS WEEK (50)</h1>
+    <app-carousel />
+  </section>
+
+  <section class="home__current-collections">
+    <h1>XIV</h1>
+    <h1>COLLECTIONS</h1>
+    <h1>24-25</h1>
+    <div class="tab">
+      <ul class="filters">
+        <li class="active">ALL</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>KID</li>
+      </ul>
+      <hr />
+    </div>
+
+    <div class="products">
+      <app-product
+        [product]="{
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          alt: 'Nuevo producto de colección',
+          description: {
+            title: 'V-Neck T-Shirt',
+            subtitle: 'Embroidered Seersucker Shirt',
+            price: '99',
+          },
+        }"
+      />
+
+      <app-product
+        [product]="{
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          alt: 'Nuevo producto de colección',
+          description: {
+            title: 'V-Neck T-Shirt',
+            subtitle: 'Embroidered Seersucker Shirt',
+            price: '99',
+          },
+        }"
+      />
+
+      <app-product
+        [product]="{
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          alt: 'Nuevo producto de colección',
+          description: {
+            title: 'V-Neck T-Shirt',
+            subtitle: 'Embroidered Seersucker Shirt',
+            price: '99',
+          },
+        }"
+      />
+    </div>
+
+    <div class="more">
+      <p>More</p>
+      <span>↓</span>
+    </div>
+  </section>
+
+  <section class="home__banner">
+    <h1>OUR APPROACH TO FASHION DESIGN</h1>
+    <p>
+      at elegant vogue , we blend creativity with craftsmanship to create
+      fashion that transcends trends and stands the test of time each design is
+      meticulously crafted, ensuring the highest quelity exqulsite finish
+    </p>
+  </section>
+
+  <section class="home__collage">
+    <div class="item-0">
+      <img
+        src="https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png"
+        alt="Imagenes de collage"
+      />
+    </div>
+    <div class="item-1">
+      <img
+        src="https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png"
+        alt="Imagenes de collage"
+      />
+    </div>
+    <div class="item-2">
+      <img
+        src="https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png"
+        alt="Imagenes de collage"
+      />
+    </div>
+  </section>
+</main>

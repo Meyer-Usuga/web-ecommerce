@@ -1,0 +1,116 @@
+@use "utils";
+
+.home {
+  display: grid;
+  gap: utils.pxToRem(32px);
+
+  &__new-collections {
+    display: grid;
+    gap: utils.pxToRem(32px);
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  &__new-in-week {
+    display: grid;
+    gap: utils.pxToRem(16px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  &__current-collections {
+    display: flex;
+    flex-direction: column;
+    gap: utils.pxToRem(16px);
+    width: 100%;
+
+    .filters {
+      list-style: none;
+      display: flex;
+      gap: utils.pxToRem(32px);
+
+      li {
+        color: utils.$color-gray-light;
+
+        &.active {
+          color: utils.$color-bg;
+        }
+      }
+    }
+
+    .products {
+      display: grid;
+      gap: utils.pxToRem(32px);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .more {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        color: utils.$color-gray-light;
+      }
+    }
+  }
+
+  &__banner {
+    max-width: utils.pxToRem(750px);
+    gap: utils.pxToRem(8px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__collage {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: pxToRem(16px);
+    row-gap: pxToRem(68px);
+    justify-content: center;
+    justify-items: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". item-1 ."
+      "item-0 item-1 item-2"
+      "item-0 item-1 item-2";
+
+    .item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .item-0 {
+      grid-area: item-0;
+    }
+
+    .item-1 {
+      margin-top: utils.pxToRem(90px);
+      grid-area: item-1;
+    }
+
+    .item-2 {
+      grid-area: item-2;
+    }
+  }
+
+  .card__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
