@@ -5,3 +5,20 @@
   gap: utils.pxToRem(32px);
   grid-template-columns: 1.5fr 1fr 1fr;
 }
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: utils.pxToRem(8px);
+
+    .controls {
+      display: flex;
+      gap: utils.pxToRem(8px);
+    }
+  }
+}

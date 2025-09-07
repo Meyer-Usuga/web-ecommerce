@@ -19,7 +19,11 @@
 
   <div class="navbar__buttons">
     <app-button icon="favorite.svg" type="primary" />
-    <app-button text="Carrito" type="primary" [styles]="cartButtonStyles" />
+    <app-button
+      text="Carrito"
+      type="primary"
+      [customStyles]="cartButtonStyles"
+    />
     <app-button icon="user.svg" type="primary" />
   </div>
 </nav>

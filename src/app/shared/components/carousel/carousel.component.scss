@@ -26,4 +26,9 @@
       min-width: utils.pxToRem(250px);
     }
   }
+
+  &__buttons {
+    display: flex;
+    gap: utils.pxToRem(8px);
+  }
 }

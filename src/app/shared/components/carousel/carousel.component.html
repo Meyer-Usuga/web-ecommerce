@@ -6,7 +6,17 @@
   </div>
 
   <div class="carousel__buttons">
-    <button (click)="prev(carousel)" [disabled]="isAtStart()">ANTERIOR</button>
-    <button (click)="next(carousel)" [disabled]="isAtEnd()">SIGUIENTE</button>
+    <app-box-button
+      [typeControl]="typeControl.STANDARD"
+      [text]="'<'"
+      (onClick)="prev(carousel)"
+      [disabled]="isAtStart()"
+    />
+    <app-box-button
+      [typeControl]="typeControl.STANDARD"
+      [text]="'>'"
+      (onClick)="next(carousel)"
+      [disabled]="isAtEnd()"
+    />
   </div>
 </section>

@@ -1,10 +1,12 @@
 import { Component, signal } from '@angular/core';
+import { BoxButtonType } from '@interface/enums';
 import { Product } from '@interface/interfaces';
+import { BoxButtonComponent } from '@shared/box-button';
 import { ProductComponent } from '@shared/product';
 
 @Component({
   selector: 'app-carousel',
-  imports: [ProductComponent],
+  imports: [ProductComponent, BoxButtonComponent],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
@@ -66,6 +68,7 @@ export class CarouselComponent {
       },
     },
   ];
+  readonly typeControl = BoxButtonType;
 
   readonly isAtStart = signal(true);
   readonly isAtEnd = signal(false);

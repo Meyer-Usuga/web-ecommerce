@@ -1,5 +1,5 @@
 <section class="new-collection">
-  <div class="card__header">
+  <div class="card">
     <div class="card__titles">
       <h1>NUEVA</h1>
       <h1>COLECCIÓN</h1>
@@ -8,9 +8,14 @@
     </div>
 
     <div class="card__buttons">
-      <button>Ir a comprar</button>
-      <button>Anterior</button>
-      <button>Siguiente</button>
+      <app-box-button
+        [typeControl]="typeControl.NAVIGATION"
+        text="Ir a comprar ⟶"
+      />
+      <div class="controls">
+        <app-box-button [typeControl]="typeControl.STANDARD" [text]="'<'" />
+        <app-box-button [typeControl]="typeControl.STANDARD" [text]="'>'" />
+      </div>
     </div>
   </div>
 

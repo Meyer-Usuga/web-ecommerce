@@ -1,13 +1,7 @@
-<button [class]="'button '+type() " [ngStyle]="styles()">
+<button [class]="'button ' + type()" [ngStyle]="customStyles()">
   @if(icon() && icon() !== ""){
-  <img 
-    [src]="icon()" 
-    alt="Web icon" 
-    height="15px"
-    width="15px" 
-  />
-  }
-  @else {
+  <img [src]="icon()" alt="Web icon" height="15px" width="15px" />
+  } @else {
   {{ text() }}
   }
 </button>

@@ -1,0 +1,12 @@
+<button
+  class="control-button"
+  [class.filter]="typeControl() === 'filter'"
+  [class.navigation]="typeControl() === 'navigation'"
+  [class.collection]="typeControl() === 'collection'"
+  [class.standard]="typeControl() === 'standard'"
+  [class.disabled]="disabled()"
+  [disabled]="disabled()"
+  (click)="handleClickButton()"
+>
+  {{ text() }}
+</button>
