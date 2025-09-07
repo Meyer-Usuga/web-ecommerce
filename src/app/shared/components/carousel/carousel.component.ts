@@ -15,7 +15,7 @@ export class CarouselComponent {
     {
       id: 'A-1',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757212836/product5_bqdp39.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'V-Neck T-Shirt',
@@ -26,7 +26,7 @@ export class CarouselComponent {
     {
       id: 'A-2',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213776/product8_hx86we.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Cotton T Shirt',
@@ -37,7 +37,7 @@ export class CarouselComponent {
     {
       id: 'A-3',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213383/product7_lh7m0e.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Henley T-Shirt',
@@ -48,7 +48,7 @@ export class CarouselComponent {
     {
       id: 'A-4',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Crewneck T-Shirt',
@@ -59,7 +59,7 @@ export class CarouselComponent {
     {
       id: 'A-5',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Crewneck T-Shirt',

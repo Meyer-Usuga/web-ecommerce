@@ -2,7 +2,7 @@
 
 .home {
   display: grid;
-  gap: utils.pxToRem(32px);
+  gap: utils.pxToRem(80px);
   @include utils.container();
 
   &__categories {
@@ -26,7 +26,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: utils.pxToRem(16px);
     row-gap: utils.pxToRem(68px);
-    margin-bottom: utils.pxToRem(120px);
+    margin-bottom: utils.pxToRem(30px);
     justify-content: center;
     justify-items: center;
     grid-auto-flow: row;
@@ -48,11 +48,6 @@
         transition: transform 0.3s ease;
       }
     }
-
-    img:hover {
-      transform: scale(1.05);
-    }
-
     .item-0 {
       grid-area: item-0;
     }

@@ -34,10 +34,13 @@
 
   &__image {
     position: relative;
+    height: min(350px, 80vh);
+    border: 1px solid utils.$color-gray-light;
+
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       display: block;
     }
 

@@ -1,6 +1,7 @@
 @use "utils";
 
 .footer {
+  margin-top: utils.pxToRem(100px);
   background-color: utils.$color-white;
 
   &__wrapper {

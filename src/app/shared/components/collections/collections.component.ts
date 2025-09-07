@@ -15,7 +15,7 @@ export class CollectionsComponent {
       amount: 12,
       featured: {
         imageUrl:
-          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
         alt: 'Nuevo producto de colección',
         description: {
           title: 'V-Neck T-Shirt',
@@ -29,7 +29,7 @@ export class CollectionsComponent {
       amount: 12,
       featured: {
         imageUrl:
-          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756780846/product2_ydoqcc.png',
         alt: 'Nuevo producto de colección',
         description: {
           title: 'V-Neck T-Shirt',
@@ -43,7 +43,7 @@ export class CollectionsComponent {
       amount: 12,
       featured: {
         imageUrl:
-          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213965/Rectangle_15_i2hd95.png',
         alt: 'Nuevo producto de colección',
         description: {
           title: 'V-Neck T-Shirt',
