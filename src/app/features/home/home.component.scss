@@ -53,6 +53,7 @@
       grid-template-areas:
         "item-0 item-1"
         "item-2 item-2";
+      grid-template-rows: 1fr 1fr;
     }
 
     .item {

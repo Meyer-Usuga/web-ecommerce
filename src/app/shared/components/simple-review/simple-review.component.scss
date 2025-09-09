@@ -1,0 +1,35 @@
+@use "utils";
+
+.simple-review {
+  display: flex;
+  align-items: start;
+  gap: utils.pxToRem(16px);
+  width: 100%;
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: utils.$color-gray-dark;
+    padding: utils.pxToRem(8px);
+
+    img {
+      width: utils.pxToRem(40px);
+      height: utils.pxToRem(40px);
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: utils.pxToRem(8px);
+    max-width: utils.pxToRem(1000px);
+
+    h3 {
+      font-weight: 500;
+    }
+  }
+}

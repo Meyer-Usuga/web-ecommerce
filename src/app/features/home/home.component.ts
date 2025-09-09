@@ -7,6 +7,7 @@ import { SearchInputComponent } from '@shared/search-input';
 import { NewThisWeekComponent } from '@shared/new-this-week';
 import { CollectionsComponent } from '@shared/collections';
 import { NewCollectionComponent } from '@shared/new-collection';
+import { ReviewsComponent } from '@shared/reviews';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { NewCollectionComponent } from '@shared/new-collection';
     SearchInputComponent,
     FooterComponent,
     CollectionsComponent,
+    ReviewsComponent,
     NewThisWeekComponent,
     NewCollectionComponent,
   ],

@@ -1,0 +1,21 @@
+<article class="simple-review">
+  <div class="simple-review__avatar">
+    <img [src]="avatar()" alt="Imagen del usuario" height="35" width="35" />
+  </div>
+  <div class="simple-review__content">
+    <h3>{{ review().user }}</h3>
+    <p>{{ review().content }}</p>
+    <h4>{{ review().date.toLocaleDateString("es-CO") }}</h4>
+
+    <div class="stars">
+      @for (i of [].constructor(review().stars); track i; let index = $index) {
+      <img
+        src="star.svg"
+        alt="Estrella de calificación para reseña"
+        width="20"
+        height="20"
+      />
+      }
+    </div>
+  </div>
+</article>
