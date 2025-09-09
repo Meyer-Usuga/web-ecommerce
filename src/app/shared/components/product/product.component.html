@@ -6,7 +6,7 @@
 
   @if(product().description){
   <div class="product__detail">
-    @let description = product().description;
+    @if(showDetails()){ @let description = product().description;
 
     <div class="description">
       <p>{{ description?.title }}</p>
@@ -16,6 +16,7 @@
       <p>{{ description?.subtitle }}</p>
       <p>${{ description?.price }}</p>
     </div>
+    }
   </div>
   }
 </article>

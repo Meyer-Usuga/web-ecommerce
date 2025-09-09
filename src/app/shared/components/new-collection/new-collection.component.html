@@ -13,14 +13,25 @@
         text="Ir a comprar ⟶"
       />
       <div class="controls">
-        <app-box-button [typeControl]="typeControl.STANDARD" [text]="'<'" />
-        <app-box-button [typeControl]="typeControl.STANDARD" [text]="'>'" />
+        <app-box-button
+          [typeControl]="typeControl.STANDARD"
+          [text]="'<'"
+          (onClick)="prevItems()"
+          [disabled]="carouselInstance.isAtStart()"
+        />
+        <app-box-button
+          [typeControl]="typeControl.STANDARD"
+          [text]="'>'"
+          (onClick)="nextItems()"
+          [disabled]="carouselInstance.isAtEnd()"
+        />
       </div>
     </div>
   </div>
 
-  <!-- TODO: Esto es un carousel ?  -->
-  @for(product of newCollection; track product){
-  <app-product [product]="product" />
-  }
+  <app-carousel
+    #carouselInstance
+    [showControls]="false"
+    [showInteractionCard]="false"
+  />
 </section>

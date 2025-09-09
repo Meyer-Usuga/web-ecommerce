@@ -5,6 +5,9 @@
   align-items: start;
   gap: utils.pxToRem(16px);
   width: 100%;
+  background: utils.$color-gray-light-2;
+  padding: utils.pxToRem(16px);
+  border-radius: utils.pxToRem(16px);
 
   &__avatar {
     display: flex;

@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BoxButtonType } from '@interface/enums';
 import { Product } from '@interface/interfaces';
 import { BoxButtonComponent } from '@shared/box-button';
+import { CarouselComponent } from '@shared/carousel';
 import { ProductComponent } from '@shared/product';
 
 @Component({
   selector: 'app-new-collection',
-  imports: [ProductComponent, BoxButtonComponent],
+  imports: [BoxButtonComponent, CarouselComponent],
   templateUrl: './new-collection.component.html',
   styleUrl: './new-collection.component.scss',
 })
 export class NewCollectionComponent {
+  @ViewChild('carouselInstance') carouselInstance?: CarouselComponent;
+
   readonly newCollection: Product[] = [
     {
       imageUrl:
@@ -25,4 +28,12 @@ export class NewCollectionComponent {
   ];
 
   readonly typeControl = BoxButtonType;
+
+  prevItems() {
+    this.carouselInstance?.prev();
+  }
+
+  nextItems() {
+    this.carouselInstance?.next();
+  }
 }

@@ -1,22 +1,28 @@
 <section class="carousel">
-  <div class="carousel__items" (scroll)="checkButtons(carousel)" #carousel>
+  <div class="carousel__items" (scroll)="checkButtons()" #carousel>
     @for(product of products; track product){
-    <app-product [product]="product" [showAddButton]="true" />
+    <app-product
+      [product]="product"
+      [showAddButton]="showInteractionCard()"
+      [showDetails]="showInteractionCard()"
+    />
     }
   </div>
 
   <div class="carousel__buttons">
+    @if(showControls()){
     <app-box-button
       [typeControl]="typeControl.STANDARD"
       [text]="'<'"
-      (onClick)="prev(carousel)"
+      (onClick)="prev()"
       [disabled]="isAtStart()"
     />
     <app-box-button
       [typeControl]="typeControl.STANDARD"
       [text]="'>'"
-      (onClick)="next(carousel)"
+      (onClick)="next()"
       [disabled]="isAtEnd()"
     />
+    }
   </div>
 </section>

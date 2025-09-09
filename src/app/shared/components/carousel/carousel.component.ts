@@ -1,4 +1,11 @@
-import { Component, signal } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  input,
+  signal,
+  ViewChild,
+} from '@angular/core';
 import { BoxButtonType } from '@interface/enums';
 import { Product } from '@interface/interfaces';
 import { BoxButtonComponent } from '@shared/box-button';
@@ -10,7 +17,11 @@ import { ProductComponent } from '@shared/product';
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
-export class CarouselComponent {
+export class CarouselComponent implements AfterViewInit {
+  @ViewChild('carousel', { static: false })
+  carouselRef!: ElementRef<HTMLElement>;
+  readonly showControls = input<boolean>(true);
+  readonly showInteractionCard = input<boolean>(true);
   readonly products: Product[] = [
     {
       id: 'A-1',
@@ -73,15 +84,20 @@ export class CarouselComponent {
   readonly isAtStart = signal(true);
   readonly isAtEnd = signal(false);
 
-  prev(carousel: HTMLElement) {
-    carousel.scrollBy({ left: -300, behavior: 'smooth' });
+  ngAfterViewInit() {
+    this.checkButtons();
   }
 
-  next(carousel: HTMLElement) {
-    carousel.scrollBy({ left: 300, behavior: 'smooth' });
+  prev() {
+    this.carouselRef.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
 
-  checkButtons(carousel: HTMLElement) {
+  next() {
+    this.carouselRef.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+
+  checkButtons() {
+    const carousel = this.carouselRef.nativeElement;
     const { scrollLeft, clientWidth, scrollWidth } = carousel;
 
     this.isAtStart.set(scrollLeft === 0);

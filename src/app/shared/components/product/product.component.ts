@@ -11,4 +11,5 @@ import { Product } from '@interface/interfaces';
 export class ProductComponent {
   readonly product = input.required<Product>();
   readonly showAddButton = input<boolean>(false);
+  readonly showDetails = input<boolean>(true);
 }

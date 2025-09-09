@@ -3,17 +3,20 @@
 .new-collection {
   display: grid;
   gap: utils.pxToRem(32px);
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 420px 1fr;
+  overflow: hidden;
+  @include utils.container();
 }
 
 .card {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  margin-bottom: utils.pxToRem(24px);
 
   &__buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1fr auto;
     gap: utils.pxToRem(8px);
 
     .controls {
