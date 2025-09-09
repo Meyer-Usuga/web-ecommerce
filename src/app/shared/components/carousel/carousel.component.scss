@@ -10,6 +10,7 @@
   gap: utils.pxToRem(16px);
   justify-content: center;
   align-items: center;
+  @include utils.container();
 
   &__items {
     display: flex;
@@ -23,7 +24,7 @@
 
     > * {
       flex: 0 0 auto;
-      min-width: utils.pxToRem(250px);
+      min-width: utils.pxToRem(240px);
     }
   }
 
