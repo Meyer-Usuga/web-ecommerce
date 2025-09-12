@@ -3,13 +3,14 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('@feature/home').then((m) => m.HomeComponent),
+    loadComponent: () =>
+      import('@feature/pages/home').then((c) => c.HomeComponent),
   },
   {
-    path: 'productos/:gender',
+    path: 'productos/:collection',
     loadComponent: () =>
-      import('@feature/product-list-page').then(
-        (m) => m.ProductListPageComponent
+      import('@feature/pages/product-list-page').then(
+        (c) => c.ProductListPageComponent
       ),
   },
 ];
