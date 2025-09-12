@@ -8,7 +8,8 @@
     <h4>{{ review().date.toLocaleDateString("es-CO") }}</h4>
 
     <div class="stars">
-      @for (i of [].constructor(review().stars); track i; let index = $index) {
+      @for (i of [].constructor(review().stars); track index; let index =
+      $index) {
       <img
         src="star.svg"
         alt="Estrella de calificación para reseña"
