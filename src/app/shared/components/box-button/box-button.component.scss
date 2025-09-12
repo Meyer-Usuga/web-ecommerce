@@ -27,10 +27,16 @@
     padding: 0 utils.pxToRem(50px);
   }
 
-  &.standard,
+  &.standard {
+    background-color: transparent;
+    padding: 0;
+  }
+
   &.filter {
     background-color: transparent;
     padding: 0;
+    width: utils.pxToRem(18px);
+    height: utils.pxToRem(18px);
   }
 
   &.disabled {

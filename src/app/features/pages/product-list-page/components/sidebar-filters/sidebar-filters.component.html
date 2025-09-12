@@ -1,0 +1,184 @@
+<div class="sidebar-filters">
+  <h1>Filters</h1>
+
+  <div class="sizes">
+    <h2>Size</h2>
+
+    <div class="sizes__controls">
+      <app-box-button
+        text="XS"
+        [typeControl]="typeControl.STANDARD"
+        (onClick)="onChangeFilter()"
+      />
+      <app-box-button
+        text="S"
+        [typeControl]="typeControl.STANDARD"
+        (onClick)="onChangeFilter()"
+      />
+      <app-box-button
+        text="M"
+        [typeControl]="typeControl.STANDARD"
+        (onClick)="onChangeFilter()"
+      />
+      <app-box-button
+        text="L"
+        [typeControl]="typeControl.STANDARD"
+        (onClick)="onChangeFilter()"
+      />
+      <app-box-button
+        text="XL"
+        [typeControl]="typeControl.STANDARD"
+        (onClick)="onChangeFilter()"
+      />
+      <app-box-button
+        text="2X"
+        [typeControl]="typeControl.STANDARD"
+        (onClick)="onChangeFilter()"
+      />
+    </div>
+  </div>
+
+  <div class="accordion">
+    <app-accordion [openDefault]="true" openingTitle="Availability">
+      <div content class="accordion__controls">
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text>Availability (450)</p>
+        </app-accordion-item>
+
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text>Out of Stack (18)</p>
+        </app-accordion-item>
+      </div>
+    </app-accordion>
+  </div>
+
+  <div class="accordion">
+    <app-accordion [openDefault]="false" openingTitle="Category">
+      <div content class="accordion__controls">
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+      </div>
+    </app-accordion>
+  </div>
+
+  <div class="accordion">
+    <app-accordion [openDefault]="false" openingTitle="Colors">
+      <div content class="accordion__controls">
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+      </div>
+    </app-accordion>
+  </div>
+
+  <div class="accordion">
+    <app-accordion [openDefault]="false" openingTitle="Price Range">
+      <div content class="accordion__controls">
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+      </div>
+    </app-accordion>
+  </div>
+
+  <div class="accordion">
+    <app-accordion [openDefault]="false" openingTitle="Collections">
+      <div content class="accordion__controls">
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+      </div>
+    </app-accordion>
+  </div>
+
+  <div class="accordion">
+    <app-accordion [openDefault]="false" openingTitle="Ratings">
+      <div content class="accordion__controls">
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+
+        <app-accordion-item>
+          <app-box-button
+            control
+            [typeControl]="typeControl.FILTER"
+            (onClick)="onChangeFilter()"
+          />
+          <p text></p>
+        </app-accordion-item>
+      </div>
+    </app-accordion>
+  </div>
+</div>

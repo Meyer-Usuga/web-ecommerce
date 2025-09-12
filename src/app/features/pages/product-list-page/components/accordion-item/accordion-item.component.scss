@@ -1,0 +1,6 @@
+@use "utils";
+
+.accordion-item {
+  display: flex;
+  gap: utils.pxToRem(8px);
+}
