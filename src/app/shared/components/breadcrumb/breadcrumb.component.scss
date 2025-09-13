@@ -1,0 +1,12 @@
+@use "utils";
+
+.breadcrumbs {
+  a {
+    text-decoration: none;
+    color: utils.$color-bg;
+
+    &.active {
+      font-weight: 500;
+    }
+  }
+}

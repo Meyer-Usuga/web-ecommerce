@@ -5,7 +5,52 @@
     <app-sidebar-filters />
   </aside>
 
-  <div class="content"></div>
+  <div class="content">
+    <app-breadcrumb />
+    <h1>Productos</h1>
+
+    <div class="content__boxs">
+      <app-search-input />
+      <div class="content__filters">
+        <app-box-button
+          [typeControl]="typeControl.COLLECTION"
+          text="NEW"
+          (onClick)="onSelectFilter()"
+        />
+        <app-box-button
+          [typeControl]="typeControl.COLLECTION"
+          text="SHIRTS"
+          (onClick)="onSelectFilter()"
+        />
+        <app-box-button
+          [typeControl]="typeControl.COLLECTION"
+          text="JACKETS"
+          (onClick)="onSelectFilter()"
+        />
+        <app-box-button
+          [typeControl]="typeControl.COLLECTION"
+          text="SHORTS"
+          (onClick)="onSelectFilter()"
+        />
+        <app-box-button
+          [typeControl]="typeControl.COLLECTION"
+          text="BEST SELLERS"
+          (onClick)="onSelectFilter()"
+        />
+        <app-box-button
+          [typeControl]="typeControl.COLLECTION"
+          text="JEANS"
+          (onClick)="onSelectFilter()"
+        />
+      </div>
+    </div>
+
+    <div class="content__results">
+      @for(product of products; track product.id){
+      <app-product [product]="product" />
+      }
+    </div>
+  </div>
 </main>
 
 <app-footer />

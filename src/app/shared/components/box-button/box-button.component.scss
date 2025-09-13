@@ -25,6 +25,10 @@
 
   &.collection {
     padding: 0 utils.pxToRem(50px);
+    background-color: transparent;
+    width: utils.pxToRem(24px);
+    height: utils.pxToRem(24px);
+    width: 100%;
   }
 
   &.standard {
