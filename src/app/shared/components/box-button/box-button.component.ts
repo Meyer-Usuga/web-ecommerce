@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { BoxButtonType } from '@interface/enums';
+import { BoxButtonType, BoxButtonSize } from '@interface/enums';
 
 @Component({
   selector: 'app-box-button',
@@ -9,11 +9,12 @@ import { BoxButtonType } from '@interface/enums';
 })
 export class BoxButtonComponent {
   readonly text = input<string | undefined>('');
+  readonly typeControl = input.required<BoxButtonType>();
+  readonly sizeControl = input<BoxButtonSize>();
   readonly disabled = input<boolean>(false);
   readonly onClick = output<void>();
-  readonly typeControl = input.required<BoxButtonType>();
 
-  handleClickButton() {
+  handleClickButton(control: HTMLElement) {
     this.onClick.emit();
   }
 }

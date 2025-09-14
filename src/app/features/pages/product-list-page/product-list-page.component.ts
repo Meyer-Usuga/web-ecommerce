@@ -5,7 +5,7 @@ import { FooterComponent } from '@shared/footer';
 import { SearchInputComponent } from '@shared/search-input';
 import { BreadcrumbComponent } from '@shared/breadcrumb';
 import { BoxButtonComponent } from '@shared/box-button';
-import { BoxButtonType } from '@interface/enums';
+import { BoxButtonSize, BoxButtonType } from '@interface/enums';
 import { Product } from '@interface/interfaces';
 import { ProductComponent } from '@shared/product';
 
@@ -26,6 +26,8 @@ import { ProductComponent } from '@shared/product';
 })
 export class ProductListPageComponent {
   readonly typeControl = BoxButtonType;
+  readonly sizeControl = BoxButtonSize;
+
   readonly products: Product[] = [
     {
       id: 'A-1',

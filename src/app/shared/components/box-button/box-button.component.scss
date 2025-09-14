@@ -16,31 +16,29 @@
   border: 1px solid utils.$color-gray-light;
   cursor: pointer;
 
-  &.navigation {
-    width: 100%;
-    justify-content: flex-start;
-    padding-left: utils.pxToRem(20px);
-    background-color: utils.$color-gray-light;
+  //types
+  &.button {
+    background-color: transparent;
+    padding: 0;
   }
 
-  &.collection {
+  &.checkbox {
+    background-color: transparent;
+    width: utils.pxToRem(20px);
+    height: utils.pxToRem(20px);
+  }
+
+  //sizes
+
+  &.medium {
+    width: 100%;
     padding: 0 utils.pxToRem(50px);
     background-color: transparent;
-    width: utils.pxToRem(24px);
     height: utils.pxToRem(24px);
+  }
+
+  &.large {
     width: 100%;
-  }
-
-  &.standard {
-    background-color: transparent;
-    padding: 0;
-  }
-
-  &.filter {
-    background-color: transparent;
-    padding: 0;
-    width: utils.pxToRem(18px);
-    height: utils.pxToRem(18px);
   }
 
   &.disabled {

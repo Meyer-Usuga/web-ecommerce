@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { BoxButtonType } from '@interface/enums';
+import { BoxButtonSize, BoxButtonType } from '@interface/enums';
 import { Product } from '@interface/interfaces';
 import { BoxButtonComponent } from '@shared/box-button';
 import { CarouselComponent } from '@shared/carousel';
@@ -28,6 +28,7 @@ export class NewCollectionComponent {
   ];
 
   readonly typeControl = BoxButtonType;
+  readonly sizeControl = BoxButtonSize;
 
   prevItems() {
     this.carouselInstance?.prev();

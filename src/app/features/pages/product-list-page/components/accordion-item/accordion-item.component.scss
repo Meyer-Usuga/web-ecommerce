@@ -2,5 +2,6 @@
 
 .accordion-item {
   display: flex;
+  align-items: center;
   gap: utils.pxToRem(8px);
 }

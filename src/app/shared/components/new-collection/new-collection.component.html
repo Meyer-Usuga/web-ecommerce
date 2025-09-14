@@ -9,18 +9,19 @@
 
     <div class="card__buttons">
       <app-box-button
-        [typeControl]="typeControl.NAVIGATION"
+        [sizeControl]="sizeControl.LARGE"
+        [typeControl]="typeControl.BUTTON"
         text="Ir a comprar ⟶"
       />
       <div class="controls">
         <app-box-button
-          [typeControl]="typeControl.STANDARD"
+          [typeControl]="typeControl.BUTTON"
           [text]="'<'"
           (onClick)="prevItems()"
           [disabled]="carouselInstance.isAtStart()"
         />
         <app-box-button
-          [typeControl]="typeControl.STANDARD"
+          [typeControl]="typeControl.BUTTON"
           [text]="'>'"
           (onClick)="nextItems()"
           [disabled]="carouselInstance.isAtEnd()"

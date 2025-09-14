@@ -13,40 +13,46 @@
       <app-search-input />
       <div class="content__filters">
         <app-box-button
-          [typeControl]="typeControl.COLLECTION"
           text="NEW"
+          [sizeControl]="sizeControl.MEDIUM"
+          [typeControl]="typeControl.BUTTON"
           (onClick)="onSelectFilter()"
         />
         <app-box-button
-          [typeControl]="typeControl.COLLECTION"
           text="SHIRTS"
+          [sizeControl]="sizeControl.MEDIUM"
+          [typeControl]="typeControl.BUTTON"
           (onClick)="onSelectFilter()"
         />
         <app-box-button
-          [typeControl]="typeControl.COLLECTION"
           text="JACKETS"
+          [sizeControl]="sizeControl.MEDIUM"
+          [typeControl]="typeControl.BUTTON"
           (onClick)="onSelectFilter()"
         />
         <app-box-button
-          [typeControl]="typeControl.COLLECTION"
           text="SHORTS"
+          [sizeControl]="sizeControl.MEDIUM"
+          [typeControl]="typeControl.BUTTON"
           (onClick)="onSelectFilter()"
         />
         <app-box-button
-          [typeControl]="typeControl.COLLECTION"
           text="BEST SELLERS"
+          [sizeControl]="sizeControl.MEDIUM"
+          [typeControl]="typeControl.BUTTON"
           (onClick)="onSelectFilter()"
         />
         <app-box-button
-          [typeControl]="typeControl.COLLECTION"
           text="JEANS"
+          [sizeControl]="sizeControl.MEDIUM"
+          [typeControl]="typeControl.BUTTON"
           (onClick)="onSelectFilter()"
         />
       </div>
     </div>
 
     <div class="content__results">
-      @for(product of products; track product.id){
+      @for(product of products; track product){
       <app-product [product]="product" />
       }
     </div>

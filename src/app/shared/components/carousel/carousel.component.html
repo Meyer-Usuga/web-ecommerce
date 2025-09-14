@@ -12,13 +12,13 @@
   <div class="carousel__buttons">
     @if(showControls()){
     <app-box-button
-      [typeControl]="typeControl.STANDARD"
+      [typeControl]="typeControl.BUTTON"
       [text]="'<'"
       (onClick)="prev()"
       [disabled]="isAtStart()"
     />
     <app-box-button
-      [typeControl]="typeControl.STANDARD"
+      [typeControl]="typeControl.BUTTON"
       [text]="'>'"
       (onClick)="next()"
       [disabled]="isAtEnd()"

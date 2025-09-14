@@ -1,12 +1,13 @@
-<button
+<input
+  #control
   class="control-button"
-  [class.filter]="typeControl() === 'filter'"
-  [class.navigation]="typeControl() === 'navigation'"
-  [class.collection]="typeControl() === 'collection'"
-  [class.standard]="typeControl() === 'standard'"
+  [type]="typeControl()"
+  [class.button]="typeControl() === 'button'"
+  [class.checkbox]="typeControl() === 'checkbox'"
+  [class.medium]="sizeControl() === 'medium'"
+  [class.large]="sizeControl() === 'large'"
   [class.disabled]="disabled()"
   [disabled]="disabled()"
-  (click)="handleClickButton()"
->
-  {{ text() }}
-</button>
+  (click)="handleClickButton(control)"
+  [value]="text()"
+/>
