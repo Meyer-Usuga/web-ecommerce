@@ -12,26 +12,28 @@
     <div class="content__boxs">
       <app-search-input />
       <div class="content__filters">
-        @for(collection of filters().collections; track collection){
+        @for(special of filters().special; track special){
         <app-box-button
-          [text]="collection.label"
+          [text]="special.label"
           [sizeControl]="sizeControl.MEDIUM"
           [typeControl]="typeControl.BUTTON"
+          [checked]="isActiveFilter('especial', special.value)"
           (onClick)="
             onSelectFilter({
-              label: 'coleccion',
-              value: collection.value
+              label: 'especial',
+              value: special.value
             })
           "
         />
         }
       </div>
     </div>
-
-    <div class="content__results">
-      @for(product of products; track product){
+    <div class="content__results" [class.notfound]="products().length === 0">
+      @if(products().length === 0){
+      <h1>No se encontraron productos</h1>
+      } @else { @for(product of products(); track product){
       <app-product [product]="product" />
-      }
+      } }
     </div>
   </div>
 </main>

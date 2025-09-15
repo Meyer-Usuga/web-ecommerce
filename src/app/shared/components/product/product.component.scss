@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .product {
   width: 100%;
@@ -35,6 +35,7 @@
   &__image {
     position: relative;
     height: min(350px, 80vh);
+    transition: border 0.2s ease-in-out;
     border: 1px solid utils.$color-gray-light;
 
     img {
@@ -54,6 +55,10 @@
       &.isActive {
         display: block;
       }
+    }
+
+    &:hover {
+      border: 1px solid utils.$color-gray-dark;
     }
   }
 }

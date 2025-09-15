@@ -9,6 +9,7 @@ export interface Filters {
   sizes: FilterValue[];
   colors: FilterValue[];
   collections: FilterValue[];
+  special: FilterValue[];
   categories: FilterValue[];
   availability: FilterValue[];
   prices: FilterValue[];

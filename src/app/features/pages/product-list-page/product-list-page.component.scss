@@ -31,10 +31,7 @@
     &__filters {
       display: grid;
       column-gap: utils.pxToRem(8px);
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(200px, 1fr)
-      );
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
       @include utils.media-ltmd() {
         grid-template-columns: 1fr !important;
@@ -59,6 +56,11 @@
 
       @include utils.media-lg() {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      &.notfound {
+        grid-template-columns: 1fr;
+        place-self: center;
       }
     }
   }

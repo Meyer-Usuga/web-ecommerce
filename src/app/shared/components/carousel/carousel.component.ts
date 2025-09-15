@@ -22,6 +22,7 @@ export class CarouselComponent implements AfterViewInit {
   carouselRef!: ElementRef<HTMLElement>;
   readonly showControls = input<boolean>(true);
   readonly showInteractionCard = input<boolean>(true);
+
   readonly products: Product[] = [
     {
       id: 'A-1',
@@ -33,6 +34,13 @@ export class CarouselComponent implements AfterViewInit {
         subtitle: 'Embroidered Seersucker Shirt',
         price: '99',
       },
+      size: 'M',
+      color: 'azul',
+      collection: 'camisas',
+      special: null,
+      category: 'hombre',
+      availability: 'disponible',
+      rating: '4',
     },
     {
       id: 'A-2',
@@ -44,6 +52,13 @@ export class CarouselComponent implements AfterViewInit {
         subtitle: 'Basic Slim Fit T-Shirt',
         price: '99',
       },
+      size: 'L',
+      color: 'negro',
+      collection: 'buzos',
+      special: 'descuento',
+      category: 'mujer',
+      availability: 'disponible',
+      rating: '5',
     },
     {
       id: 'A-3',
@@ -55,6 +70,13 @@ export class CarouselComponent implements AfterViewInit {
         subtitle: 'Blurred Print T-Shirt',
         price: '99',
       },
+      size: 'S',
+      color: 'rojo',
+      collection: 'polos',
+      special: 'edicion_limitada',
+      category: 'hombre',
+      availability: 'no_disponible',
+      rating: '3',
     },
     {
       id: 'A-4',
@@ -66,6 +88,13 @@ export class CarouselComponent implements AfterViewInit {
         subtitle: 'Full Sleeve Zipper',
         price: '99',
       },
+      size: 'XL',
+      color: 'blanco',
+      collection: 'chaquetas',
+      special: 'proximamente',
+      category: 'mujer',
+      availability: 'disponible',
+      rating: '5',
     },
     {
       id: 'A-5',
@@ -77,8 +106,16 @@ export class CarouselComponent implements AfterViewInit {
         subtitle: 'Full Sleeve Zipper',
         price: '99',
       },
+      size: 'XS',
+      color: 'naranja',
+      collection: 'pantalones',
+      special: null,
+      category: 'hombre',
+      availability: 'disponible',
+      rating: '2',
     },
   ];
+
   readonly typeControl = BoxButtonType;
 
   readonly isAtStart = signal(true);
