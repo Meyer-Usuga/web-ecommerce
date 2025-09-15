@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .sidebar-filters {
   width: 100%;
@@ -8,6 +8,7 @@
   gap: utils.pxToRem(16px);
   flex-direction: column;
   padding: utils.pxToRem(16px);
+  margin-bottom: 100vh;
 
   .sizes {
     display: flex;

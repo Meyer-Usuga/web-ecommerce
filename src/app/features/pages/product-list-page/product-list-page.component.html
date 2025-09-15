@@ -2,7 +2,7 @@
 
 <main class="product-list-page">
   <aside class="filters">
-    <app-sidebar-filters />
+    <app-sidebar-filters (selectedFilter)="onSelectFilter($event)" />
   </aside>
 
   <div class="content">
@@ -12,42 +12,19 @@
     <div class="content__boxs">
       <app-search-input />
       <div class="content__filters">
+        @for(collection of filters().collections; track collection){
         <app-box-button
-          text="NEW"
+          [text]="collection.label"
           [sizeControl]="sizeControl.MEDIUM"
           [typeControl]="typeControl.BUTTON"
-          (onClick)="onSelectFilter()"
+          (onClick)="
+            onSelectFilter({
+              label: 'coleccion',
+              value: collection.value
+            })
+          "
         />
-        <app-box-button
-          text="SHIRTS"
-          [sizeControl]="sizeControl.MEDIUM"
-          [typeControl]="typeControl.BUTTON"
-          (onClick)="onSelectFilter()"
-        />
-        <app-box-button
-          text="JACKETS"
-          [sizeControl]="sizeControl.MEDIUM"
-          [typeControl]="typeControl.BUTTON"
-          (onClick)="onSelectFilter()"
-        />
-        <app-box-button
-          text="SHORTS"
-          [sizeControl]="sizeControl.MEDIUM"
-          [typeControl]="typeControl.BUTTON"
-          (onClick)="onSelectFilter()"
-        />
-        <app-box-button
-          text="BEST SELLERS"
-          [sizeControl]="sizeControl.MEDIUM"
-          [typeControl]="typeControl.BUTTON"
-          (onClick)="onSelectFilter()"
-        />
-        <app-box-button
-          text="JEANS"
-          [sizeControl]="sizeControl.MEDIUM"
-          [typeControl]="typeControl.BUTTON"
-          (onClick)="onSelectFilter()"
-        />
+        }
       </div>
     </div>
 

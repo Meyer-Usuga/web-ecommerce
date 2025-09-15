@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .product-list-page {
   display: grid;
@@ -31,7 +31,10 @@
     &__filters {
       display: grid;
       column-gap: utils.pxToRem(8px);
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+      );
 
       @include utils.media-ltmd() {
         grid-template-columns: 1fr !important;

@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .control-button {
   border: none;
@@ -39,6 +39,11 @@
 
   &.large {
     width: 100%;
+  }
+
+  &.checked {
+    border: 1px solid utils.$color-bg;
+    font-weight: 500;
   }
 
   &.disabled {

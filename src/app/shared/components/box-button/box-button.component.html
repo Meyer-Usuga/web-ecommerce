@@ -7,7 +7,9 @@
   [class.medium]="sizeControl() === 'medium'"
   [class.large]="sizeControl() === 'large'"
   [class.disabled]="disabled()"
+  [class.checked]="typeControl() === 'button' && checked()"
   [disabled]="disabled()"
-  (click)="handleClickButton(control)"
+  (click)="handleClickButton()"
   [value]="text()"
+  [checked]="checked()"
 />

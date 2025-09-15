@@ -21,6 +21,7 @@
     "paths": {
       "@feature/*": ["app/features/*"],
       "@interface/*": ["app/core/*"],
+      "@services/*": ["app/core/services/*"],
       "@enums/*": ["app/core/*"],
       "@shared/*": ["app/shared/components/*"]
     }

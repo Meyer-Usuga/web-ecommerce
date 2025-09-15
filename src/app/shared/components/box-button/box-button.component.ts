@@ -12,9 +12,10 @@ export class BoxButtonComponent {
   readonly typeControl = input.required<BoxButtonType>();
   readonly sizeControl = input<BoxButtonSize>();
   readonly disabled = input<boolean>(false);
+  readonly checked = input<boolean>(false);
   readonly onClick = output<void>();
 
-  handleClickButton(control: HTMLElement) {
+  handleClickButton() {
     this.onClick.emit();
   }
 }

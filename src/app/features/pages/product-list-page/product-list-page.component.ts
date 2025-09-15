@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { NavbarComponent } from '@shared/navbar';
 import { SidebarFiltersComponent } from './components';
 import { FooterComponent } from '@shared/footer';
@@ -6,8 +6,10 @@ import { SearchInputComponent } from '@shared/search-input';
 import { BreadcrumbComponent } from '@shared/breadcrumb';
 import { BoxButtonComponent } from '@shared/box-button';
 import { BoxButtonSize, BoxButtonType } from '@interface/enums';
-import { Product } from '@interface/interfaces';
+import { Filters, FilterValue, Product } from '@interface/interfaces';
 import { ProductComponent } from '@shared/product';
+import { Router } from '@angular/router';
+import { FiltersService } from '@services/filters.service';
 
 @Component({
   selector: 'app-product-list-page',
@@ -25,8 +27,15 @@ import { ProductComponent } from '@shared/product';
   styleUrl: './product-list-page.component.scss',
 })
 export class ProductListPageComponent {
+  readonly #router = inject(Router);
+  readonly #filtersService = inject(FiltersService);
+
   readonly typeControl = BoxButtonType;
   readonly sizeControl = BoxButtonSize;
+
+  readonly filters = signal<Filters>(this.#filtersService.filters);
+
+  readonly activeFilters = this.#filtersService.activeFilters;
 
   readonly products: Product[] = [
     {
@@ -174,7 +183,7 @@ export class ProductListPageComponent {
     },
   ];
 
-  onSelectFilter() {
-    //TODO: Implementar
+  onSelectFilter(filter: FilterValue) {
+    this.#filtersService.updateQueryParams(filter);
   }
 }

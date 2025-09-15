@@ -26,9 +26,10 @@ export class BreadcrumbComponent {
     let accumulatedPath = '';
 
     for (const segment of urlSegments) {
-      accumulatedPath += '/' + segment;
+      const withoutParams = segment.split('?')[0];
+      accumulatedPath += '/' + withoutParams;
       breadcrumbs.push({
-        label: this.#formatLabel(segment),
+        label: this.#formatLabel(withoutParams),
         url: accumulatedPath,
       });
     }

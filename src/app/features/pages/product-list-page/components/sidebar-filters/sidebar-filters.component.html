@@ -1,183 +1,138 @@
 <div class="sidebar-filters">
-  <h1>Filters</h1>
+  <h1>Filtros</h1>
 
   <div class="sizes">
-    <h2>Size</h2>
+    <h2>Tallas</h2>
 
     <div class="sizes__controls">
+      @for(size of filters().sizes; track size){
       <app-box-button
-        text="XS"
+        [text]="size.label"
         [typeControl]="typeControl.BUTTON"
-        (onClick)="onChangeFilter()"
+        [checked]="isActiveFilter('talla', size.value)"
+        (onClick)="onChangeFilter('talla', size.value)"
       />
-      <app-box-button
-        text="S"
-        [typeControl]="typeControl.BUTTON"
-        (onClick)="onChangeFilter()"
-      />
-      <app-box-button
-        text="M"
-        [typeControl]="typeControl.BUTTON"
-        (onClick)="onChangeFilter()"
-      />
-      <app-box-button
-        text="L"
-        [typeControl]="typeControl.BUTTON"
-        (onClick)="onChangeFilter()"
-      />
-      <app-box-button
-        text="XL"
-        [typeControl]="typeControl.BUTTON"
-        (onClick)="onChangeFilter()"
-      />
-      <app-box-button
-        text="2X"
-        [typeControl]="typeControl.BUTTON"
-        (onClick)="onChangeFilter()"
-      />
+      }
     </div>
   </div>
 
   <div class="accordion">
-    <app-accordion [openDefault]="true" openingTitle="Availability">
+    <app-accordion [openDefault]="true" openingTitle="Disponibilidad">
       <div content class="accordion__controls">
+        @for(available of filters().availability; track available){
         <app-accordion-item>
           <app-box-button
             control
             [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
+            [checked]="isActiveFilter('disponibilidad', available.value)"
+            (onClick)="onChangeFilter('disponibilidad', available.value)"
           />
-          <p text>Availability (450)</p>
+          <p text>{{ available.label }}</p>
         </app-accordion-item>
-
-        <app-accordion-item>
-          <app-box-button
-            control
-            [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
-          />
-          <p text>Out of Stack (18)</p>
-        </app-accordion-item>
+        }
       </div>
     </app-accordion>
   </div>
 
   <div class="accordion">
-    <app-accordion [openDefault]="false" openingTitle="Category">
+    <app-accordion openingTitle="Categoria" [openDefault]="true">
       <div content class="accordion__controls">
+        @for(category of filters().categories; track category){
         <app-accordion-item>
           <app-box-button
             control
             [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
+            [disabled]="isActiveGender(category.value)"
+            [checked]="isActiveGender(category.value)"
+            (onClick)="onChangeFilter('categoria', category.value)"
           />
-          <p text></p>
+          <p text>{{ category.label }}</p>
         </app-accordion-item>
-
-        <app-accordion-item>
-          <app-box-button
-            control
-            [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
-          />
-          <p text></p>
-        </app-accordion-item>
+        }
       </div>
     </app-accordion>
   </div>
 
   <div class="accordion">
-    <app-accordion [openDefault]="false" openingTitle="Colors">
+    <app-accordion
+      openingTitle="Color"
+      [openDefault]="checkStateAccordion('color')"
+    >
       <div content class="accordion__controls">
+        @for(color of filters().colors; track color){
         <app-accordion-item>
           <app-box-button
             control
             [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
+            [checked]="isActiveFilter('color', color.value)"
+            (onClick)="onChangeFilter('color', color.value)"
           />
-          <p text></p>
+          <p text>{{ color.label }}</p>
         </app-accordion-item>
-
-        <app-accordion-item>
-          <app-box-button
-            control
-            [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
-          />
-          <p text></p>
-        </app-accordion-item>
+        }
       </div>
     </app-accordion>
   </div>
 
   <div class="accordion">
-    <app-accordion [openDefault]="false" openingTitle="Price Range">
+    <app-accordion
+      openingTitle="Precio"
+      [openDefault]="checkStateAccordion('precio')"
+    >
       <div content class="accordion__controls">
+        @for(price of filters().prices; track price){
         <app-accordion-item>
           <app-box-button
             control
             [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
+            [checked]="isActiveFilter('precio', price.value)"
+            (onClick)="onChangeFilter('precio', price.value)"
           />
-          <p text></p>
+          <p text>{{ price.label }}</p>
         </app-accordion-item>
-
-        <app-accordion-item>
-          <app-box-button
-            control
-            [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
-          />
-          <p text></p>
-        </app-accordion-item>
+        }
       </div>
     </app-accordion>
   </div>
 
   <div class="accordion">
-    <app-accordion [openDefault]="false" openingTitle="Collections">
+    <app-accordion
+      openingTitle="Colección"
+      [openDefault]="checkStateAccordion('coleccion')"
+    >
       <div content class="accordion__controls">
+        @for(collection of filters().collections; track collection){
         <app-accordion-item>
           <app-box-button
             control
             [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
+            [checked]="isActiveFilter('coleccion', collection.value)"
+            (onClick)="onChangeFilter('coleccion', collection.value)"
           />
-          <p text></p>
+          <p text>{{ collection.label }}</p>
         </app-accordion-item>
-
-        <app-accordion-item>
-          <app-box-button
-            control
-            [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
-          />
-          <p text></p>
-        </app-accordion-item>
+        }
       </div>
     </app-accordion>
   </div>
 
   <div class="accordion">
-    <app-accordion [openDefault]="false" openingTitle="Ratings">
+    <app-accordion
+      openingTitle="Calificación"
+      [openDefault]="checkStateAccordion('calificacion')"
+    >
       <div content class="accordion__controls">
+        @for(rating of filters().ratings; track rating){
         <app-accordion-item>
           <app-box-button
             control
             [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
+            [checked]="isActiveFilter('calificacion', rating.value)"
+            (onClick)="onChangeFilter('calificacion', rating.value)"
           />
-          <p text></p>
+          <p text>{{ rating.label }}</p>
         </app-accordion-item>
-
-        <app-accordion-item>
-          <app-box-button
-            control
-            [typeControl]="typeControl.CHECKBOX"
-            (onClick)="onChangeFilter()"
-          />
-          <p text></p>
-        </app-accordion-item>
+        }
       </div>
     </app-accordion>
   </div>
