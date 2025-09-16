@@ -14,4 +14,5 @@ export interface Filters {
   availability: FilterValue[];
   prices: FilterValue[];
   ratings: FilterValue[];
+  search?: FilterValue[];
 }

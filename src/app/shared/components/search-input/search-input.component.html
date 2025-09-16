@@ -9,7 +9,9 @@
   <input
     type="text"
     aria-label="Search input"
-    placeholder="Search"
+    placeholder="Buscar"
     class="input-wrapper__search"
+    [value]="defaultValue()"
+    (input)="onChangeText($event)"
   />
 </div>

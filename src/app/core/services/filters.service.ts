@@ -33,6 +33,10 @@ export class FiltersService {
     return this.#applyFilters(activeFilters);
   });
 
+  readonly query = computed(
+    () => this.#activeFilters()?.['busqueda']?.[0] ?? ''
+  );
+
   readonly #listFilters: Filters = {
     sizes: [
       { label: 'XS', value: 'XS' },
@@ -102,11 +106,13 @@ export class FiltersService {
     ],
   };
 
+  readonly #singleValueParams = ['especial', 'busqueda'];
+
   readonly #products: Product[] = [
     {
       id: 'A-1',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987700/Gemini_Generated_Image_l7xliul7xliul7xl_ynkuyb.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'V-Neck T-Shirt',
@@ -232,7 +238,7 @@ export class FiltersService {
     {
       id: 'B-3',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757988458/Rectangle_3_7_gjwncp.png',
       alt: 'Producto especial',
       description: {
         title: 'Classic Pants',
@@ -261,7 +267,7 @@ export class FiltersService {
       color: 'azul',
       collection: 'chaquetas',
       special: 'descuento',
-      category: 'hombre',
+      category: 'nuevo',
       availability: 'disponible',
       rating: '4',
     },
@@ -286,7 +292,7 @@ export class FiltersService {
     {
       id: 'B-6',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757988984/Gemini_Generated_Image_ljsvp0ljsvp0ljsv_aetb0l.png',
       alt: 'Próximamente en catálogo',
       description: {
         title: 'Oversized Hoodie',
@@ -304,7 +310,7 @@ export class FiltersService {
     {
       id: 'B-7',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757989765/Gemini_Generated_Image_4tubhe4tubhe4tub_b6gpig.png',
       alt: 'Producto con descuento',
       description: {
         title: 'Classic Polo',
@@ -322,7 +328,7 @@ export class FiltersService {
     {
       id: 'B-8',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987643/Gemini_Generated_Image_o6qlh4o6qlh4o6ql_oih0fr.png',
       alt: 'Edición limitada',
       description: {
         title: 'Casual T-Shirt',
@@ -340,7 +346,7 @@ export class FiltersService {
     {
       id: 'B-9',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757990629/Gemini_Generated_Image_xxpapxxxpapxxxpa_c7ntwg.png',
       alt: 'Disponible pronto',
       description: {
         title: 'Basic Crewneck',
@@ -622,7 +628,41 @@ export class FiltersService {
     for (const key of map.keys) {
       result[key] = map.getAll(key);
     }
+
+    const currentCategory = this.#router.url.split('/')[2];
+    const withParams = currentCategory?.includes('?');
+    result['categoria'] = withParams
+      ? [currentCategory.split('?')[0]]
+      : [currentCategory];
+
     return result;
+  }
+
+  #filterByText(product: Product, value: string[]): boolean {
+    const query = value.join(' ').toLowerCase().trim();
+
+    if (!query) {
+      return true;
+    }
+
+    const words = query.split(/\s+/);
+
+    const searchable = [
+      product.description?.title,
+      product.description?.subtitle,
+      product.category,
+      product.collection,
+      product.color,
+      product.special,
+      product.size,
+      product.availability,
+      product.rating,
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
+    return words.every((token) => searchable.includes(token));
   }
 
   #applyFilters(activeFilters: ActiveFilters | undefined): Product[] {
@@ -648,6 +688,8 @@ export class FiltersService {
             return values.includes(product.availability ?? '');
           case 'calificacion':
             return values.includes(product.rating ?? '');
+          case 'busqueda':
+            return this.#filterByText(product, values);
           default:
             return true;
         }
@@ -658,11 +700,23 @@ export class FiltersService {
   updateQueryParams(filter: FilterValue) {
     const { label, value } = filter;
 
+    const isSingleValue = this.#singleValueParams.includes(label);
+
     const current = this.#activatedRoute.snapshot.queryParamMap.getAll(label);
 
-    const updated = current.includes(value)
-      ? current.filter((v) => v !== value)
-      : [...current, value];
+    let updated: string[] | null;
+
+    if (isSingleValue) {
+      if (current.includes(value) || value === '') {
+        updated = null;
+      } else {
+        updated = [value];
+      }
+    } else {
+      updated = current.includes(value)
+        ? current.filter((v) => v !== value)
+        : [...current, value];
+    }
 
     this.#router.navigate([], {
       queryParams: { [label]: updated },

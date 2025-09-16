@@ -1,4 +1,4 @@
-import { Component, inject, Signal, signal } from '@angular/core';
+import { Component, computed, inject, Signal, signal } from '@angular/core';
 import { NavbarComponent } from '@shared/navbar';
 import { SidebarFiltersComponent } from './components';
 import { FooterComponent } from '@shared/footer';
@@ -6,7 +6,7 @@ import { SearchInputComponent } from '@shared/search-input';
 import { BreadcrumbComponent } from '@shared/breadcrumb';
 import { BoxButtonComponent } from '@shared/box-button';
 import { BoxButtonSize, BoxButtonType } from '@interface/enums';
-import { Filters, FilterValue, Product } from '@interface/interfaces';
+import { Filters, FilterValue } from '@interface/interfaces';
 import { ProductComponent } from '@shared/product';
 import { FiltersService } from '@services/filters.service';
 
@@ -33,6 +33,8 @@ export class ProductListPageComponent {
 
   readonly filters = signal<Filters>(this.#filtersService.filters);
 
+  readonly query = this.#filtersService.query;
+
   readonly products = this.#filtersService.products;
 
   isActiveFilter(key: string, value: string) {
@@ -40,8 +42,15 @@ export class ProductListPageComponent {
       label: key,
       value: value,
     };
-
     return this.#filtersService.checkActiveFilter(filter);
+  }
+
+  onSearchText(text: string) {
+    const filter = {
+      label: 'busqueda',
+      value: text,
+    };
+    this.onSelectFilter(filter);
   }
 
   onSelectFilter(filter: FilterValue) {

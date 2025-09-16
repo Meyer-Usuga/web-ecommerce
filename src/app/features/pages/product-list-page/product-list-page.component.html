@@ -10,7 +10,10 @@
     <h1>Productos</h1>
 
     <div class="content__boxs">
-      <app-search-input />
+      <app-search-input
+        (searchText)="onSearchText($event)"
+        [defaultValue]="query()"
+      />
       <div class="content__filters">
         @for(special of filters().special; track special){
         <app-box-button
@@ -32,7 +35,7 @@
       @if(products().length === 0){
       <h1>No se encontraron productos</h1>
       } @else { @for(product of products(); track product){
-      <app-product [product]="product" />
+      <app-product [product]="product" [showColorDots]="true" />
       } }
     </div>
   </div>

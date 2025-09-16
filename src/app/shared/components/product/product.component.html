@@ -16,7 +16,19 @@
       <p>{{ description?.subtitle }}</p>
       <p>${{ description?.price }}</p>
     </div>
-    }
+
+    @if(showColorDots()){
+    <div class="color">
+      <!-- Nota: Cuando el producto tenga muchos colores, que tengan 
+       el mismo name para que deje seleccionar 1 por producto. -->
+      <input type="radio" [id]="productId()" [name]="productId()" />
+      <label
+        [htmlFor]="productId()"
+        [ngStyle]="{ background: productColorDot() }"
+      >
+      </label>
+    </div>
+    } }
   </div>
   }
 </article>
