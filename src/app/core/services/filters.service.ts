@@ -238,7 +238,7 @@ export class FiltersService {
     {
       id: 'B-3',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757988458/Rectangle_3_7_gjwncp.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
       alt: 'Producto especial',
       description: {
         title: 'Classic Pants',
