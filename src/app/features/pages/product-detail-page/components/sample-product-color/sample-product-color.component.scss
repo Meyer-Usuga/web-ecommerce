@@ -1,0 +1,12 @@
+@use 'utils';
+
+.sample-product-color {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(8px);
+
+  .block-color {
+    height: utils.pxToRem(32px);
+    width: utils.pxToRem(32px);
+  }
+}

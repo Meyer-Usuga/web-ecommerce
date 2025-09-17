@@ -16,11 +16,13 @@ export class NewCollectionComponent {
 
   readonly newCollection: Product[] = [
     {
+      id: 'F-1',
       imageUrl:
         'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756780846/product2_ydoqcc.png',
       alt: 'Nuevo producto de colección',
     },
     {
+      id: 'F-2',
       imageUrl:
         'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
       alt: 'Nuevo producto de colección',

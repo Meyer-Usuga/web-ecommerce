@@ -2,6 +2,12 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@feature/pages/home').then((c) => c.HomeComponent),
+  },
+  {
     path: 'productos/:collection',
     loadComponent: () =>
       import('@feature/pages/product-list-page').then(
@@ -9,8 +15,14 @@ export const routes: Routes = [
       ),
   },
   {
-    path: '',
+    path: 'productos/detalle/:id',
     loadComponent: () =>
-      import('@feature/pages/home').then((c) => c.HomeComponent),
+      import('@feature/pages/product-detail-page').then(
+        (c) => c.ProductDetailPageComponent
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];

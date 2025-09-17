@@ -1,0 +1,27 @@
+<app-navbar />
+
+<main class="detail">
+  <app-product-gallery [image]="product()?.imageUrl" />
+
+  <aside class="detail__filters">
+    <div class="add-favorite">
+      <app-button icon="favorite.svg"></app-button>
+    </div>
+
+    <div class="content">
+      <h1>{{ product()?.description?.title | transformCase : 'upper' }}</h1>
+      <h1>${{ product()?.description?.price }}</h1>
+      <p>{{ product()?.description?.subtitle }}</p>
+
+      <app-sample-product-color [color]="product()?.color" />
+
+      <app-sample-product-size [size]="product()?.size" />
+
+      <app-box-button
+        [sizeControl]="sizeControl.LARGE"
+        [typeControl]="typeControl.BUTTON"
+        text="AÑADIR"
+      />
+    </div>
+  </aside>
+</main>

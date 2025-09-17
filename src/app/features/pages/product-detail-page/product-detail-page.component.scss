@@ -1,0 +1,45 @@
+@use 'utils';
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  gap: utils.pxToRem(80px);
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  @include utils.container();
+
+  &__filters {
+    width: 100%;
+    max-width: utils.pxToRem(320px);
+    border: 1px solid utils.$color-gray-light;
+
+    .add-favorite {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: utils.pxToRem(24px);
+      padding: utils.pxToRem(32px);
+
+      &__sizes {
+        display: flex;
+        gap: utils.pxToRem(8px);
+        flex-direction: column;
+      }
+    }
+  }
+
+  h1 {
+    font-size: utils.pxToRem(20px);
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: utils.pxToRem(16px);
+    font-weight: 500;
+  }
+}

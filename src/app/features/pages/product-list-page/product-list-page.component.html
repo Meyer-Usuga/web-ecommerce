@@ -35,7 +35,11 @@
       @if(products().length === 0){
       <h1>No se encontraron productos</h1>
       } @else { @for(product of products(); track product){
-      <app-product [product]="product" [showColorDots]="true" />
+      <app-product
+        [product]="product"
+        [showColorDots]="true"
+        (click)="redirectToDetail(product.id)"
+      />
       } }
     </div>
   </div>

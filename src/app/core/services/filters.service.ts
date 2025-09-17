@@ -734,4 +734,9 @@ export class FiltersService {
 
     return false;
   }
+
+  getProductById(productId: string | undefined): Product | undefined {
+    const products = this.#products;
+    return products.find((product) => product.id === productId);
+  }
 }

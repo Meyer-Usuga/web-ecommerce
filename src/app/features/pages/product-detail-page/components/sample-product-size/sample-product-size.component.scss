@@ -1,0 +1,7 @@
+@use 'utils';
+
+.sample-product-size {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(8px);
+}

@@ -9,7 +9,7 @@ import { BoxButtonSize, BoxButtonType } from '@interface/enums';
 import { Filters, FilterValue } from '@interface/interfaces';
 import { ProductComponent } from '@shared/product';
 import { FiltersService } from '@services/filters.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-list-page',
   imports: [
@@ -26,6 +26,7 @@ import { FiltersService } from '@services/filters.service';
   styleUrl: './product-list-page.component.scss',
 })
 export class ProductListPageComponent {
+  readonly #router = inject(Router);
   readonly #filtersService = inject(FiltersService);
 
   readonly typeControl = BoxButtonType;
@@ -55,5 +56,11 @@ export class ProductListPageComponent {
 
   onSelectFilter(filter: FilterValue) {
     this.#filtersService.updateQueryParams(filter);
+  }
+
+  redirectToDetail(productId: string) {
+    this.#router.navigate(['/productos/detalle', productId], {
+      queryParamsHandling: 'preserve',
+    });
   }
 }

@@ -14,6 +14,7 @@ export class CollectionsComponent {
       type: 'men',
       amount: 12,
       featured: {
+        id: 'F-3',
         imageUrl:
           'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
         alt: 'Nuevo producto de colección',
@@ -28,6 +29,7 @@ export class CollectionsComponent {
       type: 'men',
       amount: 12,
       featured: {
+        id: 'F-4',
         imageUrl:
           'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756780846/product2_ydoqcc.png',
         alt: 'Nuevo producto de colección',
@@ -42,6 +44,7 @@ export class CollectionsComponent {
       type: 'men',
       amount: 12,
       featured: {
+        id: 'F-5',
         imageUrl:
           'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213965/Rectangle_15_i2hd95.png',
         alt: 'Nuevo producto de colección',
