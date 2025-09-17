@@ -1,8 +1,13 @@
 <div class="sample-product-size">
   Size
-  <app-box-button
-    [typeControl]="typeControl.BUTTON"
-    [sizeControl]="sizeControl.SMALL"
-    [text]="size()"
-  />
+
+  <div class="block-sizes">
+    @for(size of sizes(); track size){
+    <app-box-button
+      [typeControl]="typeControl.BUTTON"
+      [sizeControl]="sizeControl.SMALL"
+      [text]="size"
+    />
+    }
+  </div>
 </div>

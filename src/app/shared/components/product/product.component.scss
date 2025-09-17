@@ -30,10 +30,11 @@
       font-weight: 500;
     }
 
-    .color {
+    .colors {
       display: flex;
       justify-content: flex-end;
       position: relative;
+      gap: utils.pxToRem(4px);
 
       input[type='radio'] {
         display: none;

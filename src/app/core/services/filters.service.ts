@@ -52,6 +52,7 @@ export class FiltersService {
       { label: 'Negro', value: 'negro' },
       { label: 'Naranja', value: 'naranja' },
       { label: 'Blanco', value: 'blanco' },
+      { label: 'Verde', value: 'verde' },
     ],
     collections: [
       { label: 'Buzos', value: 'buzos' },
@@ -119,8 +120,29 @@ export class FiltersService {
         subtitle: 'Embroidered Seersucker Shirt',
         price: '99',
       },
-      size: 'M',
-      color: 'azul',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987700/Gemini_Generated_Image_l7xliul7xliul7xl_ynkuyb.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987700/Gemini_Generated_Image_l7xliul7xliul7xl_ynkuyb.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987700/Gemini_Generated_Image_l7xliul7xliul7xl_ynkuyb.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987700/Gemini_Generated_Image_l7xliul7xliul7xl_ynkuyb.png',
+          color: 'negro',
+        },
+      ],
       collection: 'camisas',
       special: null,
       category: 'hombre',
@@ -137,8 +159,19 @@ export class FiltersService {
         subtitle: 'Basic Slim Fit T-Shirt',
         price: '120',
       },
-      size: 'L',
-      color: 'negro',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'buzos',
       special: 'descuento',
       category: 'mujer',
@@ -155,8 +188,24 @@ export class FiltersService {
         subtitle: 'Blurred Print T-Shirt',
         price: '180',
       },
-      size: 'S',
-      color: 'rojo',
+      size: ['XS', 'S', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'negro',
+        },
+      ],
       collection: 'polos',
       special: 'edicion_limitada',
       category: 'hombre',
@@ -173,8 +222,24 @@ export class FiltersService {
         subtitle: 'Full Sleeve Zipper',
         price: '210',
       },
-      size: 'XL',
-      color: 'blanco',
+      size: ['XS', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'rojo',
+        },
+      ],
       collection: 'chaquetas',
       special: 'proximamente',
       category: 'mujer',
@@ -191,8 +256,24 @@ export class FiltersService {
         subtitle: 'Full Sleeve Zipper',
         price: '150',
       },
-      size: 'XS',
-      color: 'naranja',
+      size: ['L'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'negro',
+        },
+      ],
       collection: 'pantalones',
       special: null,
       category: 'hombre',
@@ -209,8 +290,24 @@ export class FiltersService {
         subtitle: 'Casual Wear',
         price: '110',
       },
-      size: '2X',
-      color: 'negro',
+      size: ['S', 'M'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'buzos',
       special: 'descuento',
       category: 'mujer',
@@ -227,8 +324,24 @@ export class FiltersService {
         subtitle: 'Casual Line',
         price: '90',
       },
-      size: 'M',
-      color: 'rojo',
+      size: ['XS', 'S'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'negro',
+        },
+      ],
       collection: 'polos',
       special: 'edicion_limitada',
       category: 'hombre',
@@ -245,8 +358,24 @@ export class FiltersService {
         subtitle: 'Slim Fit',
         price: '130',
       },
-      size: 'L',
-      color: 'azul',
+      size: ['XS', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1756779610/product1_zgq3nh.png',
+          color: 'naranja',
+        },
+      ],
       collection: 'pantalones',
       special: null,
       category: 'mujer',
@@ -263,8 +392,24 @@ export class FiltersService {
         subtitle: 'Casual Blue Denim',
         price: '250',
       },
-      size: 'M',
-      color: 'azul',
+      size: ['XS', 'S', 'M', 'L'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'rojo',
+        },
+      ],
       collection: 'chaquetas',
       special: 'descuento',
       category: 'nuevo',
@@ -281,8 +426,24 @@ export class FiltersService {
         subtitle: 'Premium Quality',
         price: '320',
       },
-      size: 'S',
-      color: 'negro',
+      size: ['XS', 'S', 'M'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'azul',
+        },
+      ],
       collection: 'pantalones',
       special: 'edicion_limitada',
       category: 'mujer',
@@ -299,8 +460,24 @@ export class FiltersService {
         subtitle: 'Streetwear Style',
         price: '140',
       },
-      size: 'XL',
-      color: 'naranja',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757988984/Gemini_Generated_Image_ljsvp0ljsvp0ljsv_aetb0l.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757988984/Gemini_Generated_Image_ljsvp0ljsvp0ljsv_aetb0l.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757988984/Gemini_Generated_Image_ljsvp0ljsvp0ljsv_aetb0l.png',
+          color: 'verde',
+        },
+      ],
       collection: 'buzos',
       special: 'proximamente',
       category: 'hombre',
@@ -317,8 +494,24 @@ export class FiltersService {
         subtitle: 'Soft Cotton',
         price: '80',
       },
-      size: 'L',
-      color: 'blanco',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757989765/Gemini_Generated_Image_4tubhe4tubhe4tub_b6gpig.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757989765/Gemini_Generated_Image_4tubhe4tubhe4tub_b6gpig.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757989765/Gemini_Generated_Image_4tubhe4tubhe4tub_b6gpig.png',
+          color: 'negro',
+        },
+      ],
       collection: 'polos',
       special: 'descuento',
       category: 'mujer',
@@ -335,8 +528,24 @@ export class FiltersService {
         subtitle: 'Graphic Print',
         price: '115',
       },
-      size: 'XS',
-      color: 'rojo',
+      size: ['XS', 'S', 'M', 'L', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987643/Gemini_Generated_Image_o6qlh4o6qlh4o6ql_oih0fr.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987643/Gemini_Generated_Image_o6qlh4o6qlh4o6ql_oih0fr.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757987643/Gemini_Generated_Image_o6qlh4o6qlh4o6ql_oih0fr.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'camisas',
       special: 'edicion_limitada',
       category: 'hombre',
@@ -353,8 +562,24 @@ export class FiltersService {
         subtitle: 'Comfort Fit',
         price: '95',
       },
-      size: '2X',
-      color: 'azul',
+      size: ['XS', 'S'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757990629/Gemini_Generated_Image_xxpapxxxpapxxxpa_c7ntwg.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757990629/Gemini_Generated_Image_xxpapxxxpapxxxpa_c7ntwg.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757990629/Gemini_Generated_Image_xxpapxxxpapxxxpa_c7ntwg.png',
+          color: 'rojo',
+        },
+      ],
       collection: 'buzos',
       special: 'proximamente',
       category: 'mujer',
@@ -371,8 +596,24 @@ export class FiltersService {
         subtitle: 'Casual Line',
         price: '175',
       },
-      size: 'M',
-      color: 'negro',
+      size: ['S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'pantalones',
       special: null,
       category: 'hombre',
@@ -389,8 +630,24 @@ export class FiltersService {
         subtitle: 'Active Wear',
         price: '200',
       },
-      size: 'XL',
-      color: 'naranja',
+      size: ['XS', 'S', 'M', 'L', 'XL'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'negro',
+        },
+      ],
       collection: 'buzos',
       special: 'edicion_limitada',
       category: 'mujer',
@@ -407,8 +664,24 @@ export class FiltersService {
         subtitle: 'Zippered Design',
         price: '180',
       },
-      size: 'S',
-      color: 'rojo',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'azul',
+        },
+      ],
       collection: 'chaquetas',
       special: 'descuento',
       category: 'hombre',
@@ -425,8 +698,24 @@ export class FiltersService {
         subtitle: 'Lightweight Fabric',
         price: '125',
       },
-      size: 'L',
-      color: 'blanco',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'rojo',
+        },
+      ],
       collection: 'camisas',
       special: 'proximamente',
       category: 'mujer',
@@ -443,8 +732,24 @@ export class FiltersService {
         subtitle: 'Classic Button Down',
         price: '135',
       },
-      size: 'M',
-      color: 'azul',
+      size: ['XS', 'S', 'M'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'camisas',
       special: 'proximamente',
       category: 'hombre',
@@ -461,8 +766,24 @@ export class FiltersService {
         subtitle: 'Urban Style',
         price: '160',
       },
-      size: 'L',
-      color: 'negro',
+      size: ['2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'azul',
+        },
+      ],
       collection: 'buzos',
       special: 'descuento',
       category: 'mujer',
@@ -479,8 +800,24 @@ export class FiltersService {
         subtitle: 'Premium Cotton',
         price: '150',
       },
-      size: 'S',
-      color: 'blanco',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'rojo',
+        },
+      ],
       collection: 'polos',
       special: 'edicion_limitada',
       category: 'hombre',
@@ -497,8 +834,24 @@ export class FiltersService {
         subtitle: 'Slim Casual',
         price: '140',
       },
-      size: 'XL',
-      color: 'naranja',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+          color: 'negro',
+        },
+      ],
       collection: 'pantalones',
       special: null,
       category: 'mujer',
@@ -515,8 +868,24 @@ export class FiltersService {
         subtitle: 'Lightweight Windbreaker',
         price: '210',
       },
-      size: 'M',
-      color: 'rojo',
+      size: ['M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'chaquetas',
       special: 'proximamente',
       category: 'hombre',
@@ -533,8 +902,24 @@ export class FiltersService {
         subtitle: 'Casual Cotton',
         price: '85',
       },
-      size: '2X',
-      color: 'azul',
+      size: ['XS', 'S'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
+          color: 'rojo',
+        },
+      ],
       collection: 'camisas',
       special: 'descuento',
       category: 'mujer',
@@ -551,8 +936,24 @@ export class FiltersService {
         subtitle: 'Sport Line',
         price: '95',
       },
-      size: 'XS',
-      color: 'blanco',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+          color: 'azul',
+        },
+      ],
       collection: 'polos',
       special: 'edicion_limitada',
       category: 'hombre',
@@ -569,8 +970,24 @@ export class FiltersService {
         subtitle: 'Utility Fit',
         price: '180',
       },
-      size: 'L',
-      color: 'negro',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'negro',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+          color: 'blanco',
+        },
+      ],
       collection: 'pantalones',
       special: null,
       category: 'mujer',
@@ -587,8 +1004,24 @@ export class FiltersService {
         subtitle: 'Active Line',
         price: '170',
       },
-      size: 'M',
-      color: 'naranja',
+      size: ['XS', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'naranja',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+          color: 'negro',
+        },
+      ],
       collection: 'buzos',
       special: 'descuento',
       category: 'hombre',
@@ -605,8 +1038,24 @@ export class FiltersService {
         subtitle: 'Linen Fabric',
         price: '190',
       },
-      size: 'XL',
-      color: 'rojo',
+      size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'blanco',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+          color: 'azul',
+        },
+      ],
       collection: 'camisas',
       special: 'proximamente',
       category: 'mujer',
@@ -652,9 +1101,9 @@ export class FiltersService {
       product.description?.subtitle,
       product.category,
       product.collection,
-      product.color,
+      product.color?.map((c) => c.color).join(' '),
       product.special,
-      product.size,
+      product.size?.join(' '),
       product.availability,
       product.rating,
     ]
@@ -679,11 +1128,11 @@ export class FiltersService {
           case 'categoria':
             return values.includes(product.category ?? '');
           case 'color':
-            return values.includes(product.color ?? '');
+            return product.color?.some((c) => values.includes(c.color));
           case 'coleccion':
             return values.includes(product.collection ?? '');
           case 'talla':
-            return values.includes(product.size ?? '');
+            return product.size?.some((s) => values.includes(s));
           case 'disponibilidad':
             return values.includes(product.availability ?? '');
           case 'calificacion':

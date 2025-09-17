@@ -10,7 +10,7 @@ import { BoxButtonComponent } from '@shared/box-button';
   styleUrl: './sample-product-size.component.scss',
 })
 export class SampleProductSizeComponent {
-  readonly size = input.required<string | undefined>();
+  readonly sizes = input.required<string[] | undefined>();
   readonly typeControl = BoxButtonType;
   readonly sizeControl = BoxButtonSize;
 }

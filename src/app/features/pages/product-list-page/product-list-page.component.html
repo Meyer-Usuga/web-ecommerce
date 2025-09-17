@@ -7,7 +7,7 @@
 
   <div class="content">
     <app-breadcrumb />
-    <h1>Productos</h1>
+    <h1>Productos ({{ products().length }})</h1>
 
     <div class="content__boxs">
       <app-search-input
@@ -38,7 +38,7 @@
       <app-product
         [product]="product"
         [showColorDots]="true"
-        (click)="redirectToDetail(product.id)"
+        (onClick)="redirectToDetail(product.id)"
       />
       } }
     </div>

@@ -5,8 +5,14 @@
   flex-direction: column;
   gap: utils.pxToRem(8px);
 
-  .block-color {
-    height: utils.pxToRem(32px);
-    width: utils.pxToRem(32px);
+  .block-colors {
+    display: flex;
+    gap: utils.pxToRem(6px);
+
+    div {
+      height: utils.pxToRem(32px);
+      width: utils.pxToRem(32px);
+      border: 1px solid utils.$color-gray-light;
+    }
   }
 }

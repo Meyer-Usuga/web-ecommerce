@@ -1,6 +1,10 @@
 <article class="product">
   <div class="product__image">
-    <img [src]="product().imageUrl" [alt]="product().alt" />
+    <img
+      [src]="product().imageUrl"
+      [alt]="product().alt"
+      (click)="onClickProduct()"
+    />
     <button [class.isActive]="showAddButton()">+</button>
   </div>
 
@@ -18,15 +22,12 @@
     </div>
 
     @if(showColorDots()){
-    <div class="color">
-      <!-- Nota: Cuando el producto tenga muchos colores, que tengan 
-       el mismo name para que deje seleccionar 1 por producto. -->
-      <input type="radio" [id]="productId()" [name]="productId()" />
-      <label
-        [htmlFor]="productId()"
-        [ngStyle]="{ background: productColorDot() }"
-      >
+    <div class="colors">
+      @for(colorDot of productColorDots(); track colorDot; let i = $index){
+      <input type="radio" [id]="productId() + i" [name]="productId()" />
+      <label [htmlFor]="productId() + i" [ngStyle]="{ background: colorDot }">
       </label>
+      }
     </div>
     } }
   </div>

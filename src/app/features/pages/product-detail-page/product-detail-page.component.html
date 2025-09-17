@@ -13,9 +13,9 @@
       <h1>${{ product()?.description?.price }}</h1>
       <p>{{ product()?.description?.subtitle }}</p>
 
-      <app-sample-product-color [color]="product()?.color" />
+      <app-sample-product-color [colors]="product()?.color" />
 
-      <app-sample-product-size [size]="product()?.size" />
+      <app-sample-product-size [sizes]="product()?.size" />
 
       <app-box-button
         [sizeControl]="sizeControl.LARGE"

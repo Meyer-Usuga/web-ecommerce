@@ -1,5 +1,6 @@
 import { NgStyle } from '@angular/common';
 import { Component, computed, input } from '@angular/core';
+import { ImageColor } from '@interface/interfaces';
 
 @Component({
   selector: 'app-sample-product-color',
@@ -9,8 +10,8 @@ import { Component, computed, input } from '@angular/core';
   styleUrl: './sample-product-color.component.scss',
 })
 export class SampleProductColorComponent {
-  readonly color = input.required<string | undefined>();
-  readonly mapColor = computed(() => {
+  readonly colors = input.required<ImageColor[] | undefined>();
+  readonly sampleColors = computed(() => {
     return this.#mapColor();
   });
 
@@ -21,10 +22,16 @@ export class SampleProductColorComponent {
       negro: 'black',
       naranja: 'orange',
       blanco: 'white',
+      verde: 'green',
     };
 
-    const productColor = this.color();
+    const mapColors: string[] = [];
+    const productColors = this.colors();
 
-    return colors[productColor!];
+    productColors?.forEach((sampleColor) => {
+      mapColors.push(colors[sampleColor.color]);
+    });
+
+    return mapColors;
   }
 }

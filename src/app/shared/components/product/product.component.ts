@@ -1,5 +1,5 @@
 import { NgStyle } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, output } from '@angular/core';
 import { Product } from '@interface/interfaces';
 
 @Component({
@@ -14,12 +14,13 @@ export class ProductComponent {
   readonly showAddButton = input<boolean>(false);
   readonly showDetails = input<boolean>(true);
   readonly showColorDots = input<boolean>(false);
-  readonly productColorDot = computed(() => {
+  readonly productColorDots = computed(() => {
     return this.#mapColor();
   });
   readonly productId = computed(() => {
     return `'${this.product().id}__product'`;
   });
+  readonly onClick = output<void>();
 
   #mapColor() {
     const colors: Record<string, string> = {
@@ -28,10 +29,20 @@ export class ProductComponent {
       negro: 'black',
       naranja: 'orange',
       blanco: 'white',
+      verde: 'green',
     };
 
-    const productColor = this.product().color;
+    const mapColors: string[] = [];
+    const productColors = this.product().color;
 
-    return colors[productColor!];
+    productColors?.forEach((sampleColor) => {
+      mapColors.push(colors[sampleColor.color]);
+    });
+
+    return mapColors;
+  }
+
+  onClickProduct() {
+    this.onClick.emit();
   }
 }
