@@ -42,4 +42,8 @@
     font-size: utils.pxToRem(16px);
     font-weight: 500;
   }
+
+  small {
+    color: utils.$color-gray-dark;
+  }
 }

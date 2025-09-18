@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: utils.pxToRem(8px);
+  color: utils.$color-gray-dark;
+  font-size: utils.pxToRem(14px);
 
   .block-colors {
     display: flex;
