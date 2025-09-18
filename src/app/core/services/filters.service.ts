@@ -181,7 +181,7 @@ export class FiltersService {
     {
       id: 'A-3',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163342/Gemini_Generated_Image_iilu3xiilu3xiilu_bfgnrv.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Henley T-Shirt',
@@ -192,17 +192,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163342/Gemini_Generated_Image_iilu3xiilu3xiilu_bfgnrv.png',
           color: 'azul',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163342/Gemini_Generated_Image_iilu3xiilu3xiilu_bfgnrv.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163342/Gemini_Generated_Image_iilu3xiilu3xiilu_bfgnrv.png',
           color: 'negro',
         },
       ],
@@ -215,7 +215,7 @@ export class FiltersService {
     {
       id: 'A-4',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163496/Gemini_Generated_Image_db6ea5db6ea5db6e_kjfx7n.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Crewneck T-Shirt',
@@ -226,17 +226,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163496/Gemini_Generated_Image_db6ea5db6ea5db6e_kjfx7n.png',
           color: 'blanco',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163496/Gemini_Generated_Image_db6ea5db6ea5db6e_kjfx7n.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163496/Gemini_Generated_Image_db6ea5db6ea5db6e_kjfx7n.png',
           color: 'rojo',
         },
       ],
@@ -245,40 +245,6 @@ export class FiltersService {
       category: 'mujer',
       availability: 'disponible',
       rating: '5',
-    },
-    {
-      id: 'A-5',
-      imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
-      alt: 'Nuevo articulo de la semana',
-      description: {
-        title: 'Crewneck T-Shirt',
-        subtitle: 'Full Sleeve Zipper',
-        price: '150',
-      },
-      size: ['L'],
-      color: [
-        {
-          imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
-          color: 'rojo',
-        },
-        {
-          imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
-          color: 'azul',
-        },
-        {
-          imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
-          color: 'negro',
-        },
-      ],
-      collection: 'pantalones',
-      special: null,
-      category: 'hombre',
-      availability: 'disponible',
-      rating: '2',
     },
     {
       id: 'B-1',
@@ -317,7 +283,7 @@ export class FiltersService {
     {
       id: 'B-2',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163820/Gemini_Generated_Image_lbeefxlbeefxlbee_aaei56.png',
       alt: 'Producto especial',
       description: {
         title: 'Slim Fit Polo',
@@ -328,17 +294,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163820/Gemini_Generated_Image_lbeefxlbeefxlbee_aaei56.png',
           color: 'rojo',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163820/Gemini_Generated_Image_lbeefxlbeefxlbee_aaei56.png',
           color: 'azul',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163820/Gemini_Generated_Image_lbeefxlbeefxlbee_aaei56.png',
           color: 'negro',
         },
       ],
@@ -587,9 +553,43 @@ export class FiltersService {
       rating: '5',
     },
     {
+      id: 'B-10',
+      imageUrl:
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163681/Gemini_Generated_Image_lrdwjelrdwjelrdw_ff3flv.png',
+      alt: 'Nuevo articulo de la semana',
+      description: {
+        title: 'Crewneck T-Shirt',
+        subtitle: 'Full Sleeve Zipper',
+        price: '150',
+      },
+      size: ['L'],
+      color: [
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163681/Gemini_Generated_Image_lrdwjelrdwjelrdw_ff3flv.png',
+          color: 'rojo',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163681/Gemini_Generated_Image_lrdwjelrdwjelrdw_ff3flv.png',
+          color: 'azul',
+        },
+        {
+          imageUrl:
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758163681/Gemini_Generated_Image_lrdwjelrdwjelrdw_ff3flv.png',
+          color: 'negro',
+        },
+      ],
+      collection: 'pantalones',
+      special: null,
+      category: 'hombre',
+      availability: 'disponible',
+      rating: '2',
+    },
+    {
       id: 'C-1',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164592/Gemini_Generated_Image_he75tvhe75tvhe75_zsgmm1.png',
       alt: 'Producto destacado',
       description: {
         title: 'Slim Pants',
@@ -600,17 +600,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164592/Gemini_Generated_Image_he75tvhe75tvhe75_zsgmm1.png',
           color: 'negro',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164592/Gemini_Generated_Image_he75tvhe75tvhe75_zsgmm1.png',
           color: 'azul',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213063/product6_nfsobm.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164592/Gemini_Generated_Image_he75tvhe75tvhe75_zsgmm1.png',
           color: 'blanco',
         },
       ],
@@ -657,7 +657,7 @@ export class FiltersService {
     {
       id: 'C-3',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164958/Gemini_Generated_Image_i5oyodi5oyodi5oy_p7vldp.png',
       alt: 'Descuento especial',
       description: {
         title: 'Casual Jacket',
@@ -668,17 +668,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164958/Gemini_Generated_Image_i5oyodi5oyodi5oy_p7vldp.png',
           color: 'rojo',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164958/Gemini_Generated_Image_i5oyodi5oyodi5oy_p7vldp.png',
           color: 'blanco',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164958/Gemini_Generated_Image_i5oyodi5oyodi5oy_p7vldp.png',
           color: 'azul',
         },
       ],
@@ -737,7 +737,7 @@ export class FiltersService {
         {
           imageUrl:
             'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757213966/Rectangle_18_1_iacr4a.png',
-          color: 'azul',
+          color: 'verde',
         },
         {
           imageUrl:
@@ -793,7 +793,7 @@ export class FiltersService {
     {
       id: 'C-7',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164027/Gemini_Generated_Image_mut29kmut29kmut2_iae20l.png',
       alt: 'Edición limitada exclusiva',
       description: {
         title: 'Slim Fit Polo',
@@ -804,17 +804,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164027/Gemini_Generated_Image_mut29kmut29kmut2_iae20l.png',
           color: 'blanco',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164027/Gemini_Generated_Image_mut29kmut29kmut2_iae20l.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164027/Gemini_Generated_Image_mut29kmut29kmut2_iae20l.png',
           color: 'rojo',
         },
       ],
@@ -861,7 +861,7 @@ export class FiltersService {
     {
       id: 'C-9',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164220/Gemini_Generated_Image_gbz9yqgbz9yqgbz9_f0fcvk.png',
       alt: 'Próximamente disponible',
       description: {
         title: 'Casual Jacket',
@@ -872,17 +872,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164220/Gemini_Generated_Image_gbz9yqgbz9yqgbz9_f0fcvk.png',
           color: 'rojo',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164220/Gemini_Generated_Image_gbz9yqgbz9yqgbz9_f0fcvk.png',
           color: 'azul',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164220/Gemini_Generated_Image_gbz9yqgbz9yqgbz9_f0fcvk.png',
           color: 'blanco',
         },
       ],
@@ -929,7 +929,7 @@ export class FiltersService {
     {
       id: 'D-1',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164394/Gemini_Generated_Image_be8r57be8r57be8r_fcr3s9.png',
       alt: 'Edición de colección',
       description: {
         title: 'Classic Polo',
@@ -940,17 +940,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164394/Gemini_Generated_Image_be8r57be8r57be8r_fcr3s9.png',
           color: 'blanco',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164394/Gemini_Generated_Image_be8r57be8r57be8r_fcr3s9.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757210225/product4_eqnwzt.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758164394/Gemini_Generated_Image_be8r57be8r57be8r_fcr3s9.png',
           color: 'azul',
         },
       ],
