@@ -11,4 +11,8 @@ import { BoxButtonComponent } from '@shared/box-button';
 })
 export class CheckoutDataFormComponent {
   readonly form = input.required<FormGroup>();
+
+  onCheckInput(field: string) {
+    return this.form().get(field)?.invalid && this.form().get(field)?.touched;
+  }
 }

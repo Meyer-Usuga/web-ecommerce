@@ -8,6 +8,7 @@
         type="email"
         formControlName="email"
         placeholder="Correo"
+        [class.invalid]="onCheckInput('email')"
       />
     </div>
 
@@ -17,6 +18,7 @@
         type="number"
         formControlName="phone"
         placeholder="Teléfono"
+        [class.invalid]="onCheckInput('phone')"
       />
     </div>
   </div>
@@ -30,12 +32,14 @@
         type="text"
         formControlName="firstName"
         placeholder="Nombres"
+        [class.invalid]="onCheckInput('firstName')"
       />
       <input
         id="lastName"
         type="text"
         formControlName="lastName"
         placeholder="Apellidos"
+        [class.invalid]="onCheckInput('lastName')"
       />
     </div>
 
@@ -45,6 +49,7 @@
         type="text"
         formControlName="country"
         placeholder="País"
+        [class.invalid]="onCheckInput('country')"
       />
     </div>
     <div class="fields">
@@ -53,6 +58,7 @@
         type="text"
         formControlName="state"
         placeholder="Departamento"
+        [class.invalid]="onCheckInput('state')"
       />
     </div>
     <div class="fields">
@@ -61,6 +67,7 @@
         type="text"
         formControlName="address"
         placeholder="Dirección"
+        [class.invalid]="onCheckInput('address')"
       />
     </div>
     <div class="fields">
@@ -69,12 +76,14 @@
         type="text"
         formControlName="city"
         placeholder="Ciudad"
+        [class.invalid]="onCheckInput('city')"
       />
       <input
         id="zipCode"
         type="text"
         formControlName="zipCode"
         placeholder="Código postal"
+        [class.invalid]="onCheckInput('zipCode')"
       />
     </div>
   </div>

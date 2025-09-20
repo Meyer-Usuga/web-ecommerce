@@ -1,3 +1,4 @@
+export * from './steps';
 export * from './navbar';
 export * from './product';
 export * from './carousel';

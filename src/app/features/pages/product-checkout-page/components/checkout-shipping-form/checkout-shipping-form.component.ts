@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, effect, input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -10,4 +10,21 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class CheckoutShippingFormComponent {
   readonly form = input.required<FormGroup>();
+
+  constructor() {
+    effect(() => {
+      this.setDefaultFields();
+    });
+  }
+
+  setDefaultFields() {
+    this.form().get('method')?.disable();
+    this.form().get('method')?.setValue('Entrega express');
+    this.form().get('price')?.disable();
+    this.form().get('price')?.setValue('0$');
+  }
+
+  onCheckInput(field: string) {
+    return this.form().get(field)?.invalid && this.form().get(field)?.touched;
+  }
 }

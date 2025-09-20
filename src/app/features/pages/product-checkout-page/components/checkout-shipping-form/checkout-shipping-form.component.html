@@ -8,15 +8,21 @@
         type="text"
         formControlName="method"
         placeholder="Método de envío"
+        class="disabled"
+        [class.invalid]="onCheckInput('method')"
       />
     </div>
     <div class="fields">
       <input
         id="price"
-        type="number"
+        type="text"
         formControlName="price"
         placeholder="Costo de envío"
+        class="disabled"
+        [class.invalid]="onCheckInput('price')"
       />
     </div>
+
+    <p>Gratis para ti.</p>
   </div>
 </section>

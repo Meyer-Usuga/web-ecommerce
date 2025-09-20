@@ -8,6 +8,8 @@
         type="text"
         formControlName="method"
         placeholder="Método de pago"
+        class="disabled"
+        [class.invalid]="onCheckInput('method')"
       />
     </div>
 
@@ -17,6 +19,7 @@
         type="text"
         formControlName="cardName"
         placeholder="Nombre del títular"
+        [class.invalid]="onCheckInput('cardName')"
       />
     </div>
 
@@ -26,17 +29,28 @@
         type="text"
         formControlName="cardNumber"
         placeholder="Número de tarjeta"
+        class="disabled"
+        [class.invalid]="onCheckInput('cardNumber')"
       />
       <input
         id="expDate"
         type="text"
         formControlName="expDate"
         placeholder="Fecha de expiración"
+        class="disabled"
+        [class.invalid]="onCheckInput('expDate')"
       />
     </div>
 
     <div class="fields">
-      <input id="cvv" type="text" formControlName="cvv" placeholder="CVV" />
+      <input
+        id="cvv"
+        type="text"
+        formControlName="cvv"
+        placeholder="CVV"
+        class="disabled"
+        [class.invalid]="onCheckInput('cvv')"
+      />
     </div>
   </div>
 </section>

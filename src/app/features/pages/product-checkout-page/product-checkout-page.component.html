@@ -3,35 +3,45 @@
     <p class="back">⟵</p>
     <h1>VERIFICAR</h1>
 
-    <!-- TODO: Envolver estos steps en un componente proyectado -->
-    <nav class="steps">
-      <span (click)="onChangeStep(typeSteps.INFORMATION)">INFORMACIÓN</span>
-      <span (click)="onChangeStep(typeSteps.SHIPPING)">ENVÍO</span>
-      <span (click)="onChangeStep(typeSteps.PAYMENT)">PAGO</span>
-    </nav>
-
-    <form class="form" [formGroup]="checkoutForm">
-      <app-checkout-data-form
-        [form]="customerForm"
-        [class.inactive]="!listSteps[0].active"
-      />
-      <app-checkout-shipping-form
-        [form]="shippingForm"
-        [class.inactive]="!listSteps[1].active"
-      />
-      <app-checkout-payment-form
-        [form]="paymentForm"
-        [class.inactive]="!listSteps[2].active"
-      />
-
-      <div class="continue-button">
-        <app-box-button
-          text="Continuar envío ⟶"
-          [sizeControl]="sizeControl.LARGE"
-          [typeControl]="typeControl.BUTTON"
+    <app-steps [steps]="listSteps">
+      <form class="form" [formGroup]="checkoutForm" content>
+        <app-checkout-data-form
+          [form]="getForm('customer')"
+          [class.inactive]="!listSteps[0].active"
         />
-      </div>
-    </form>
+        <app-checkout-shipping-form
+          [form]="getForm('shipping')"
+          [class.inactive]="!listSteps[1].active"
+        />
+        <app-checkout-payment-form
+          [form]="getForm('payment')"
+          [class.inactive]="!listSteps[2].active"
+        />
+
+        <div class="continue-button">
+          <app-box-button
+            class="back"
+            text="⟵ Regresar"
+            [class.show]="currentStepIndex > 0"
+            [sizeControl]="sizeControl.LARGE"
+            [typeControl]="typeControl.BUTTON"
+            (onClick)="prevStep()"
+          />
+
+          <app-box-button
+            [text]="
+              currentStepIndex === listSteps.length - 1
+                ? 'Pagar'
+                : 'Continuar envío ⟶'
+            "
+            [sizeControl]="sizeControl.LARGE"
+            [typeControl]="typeControl.BUTTON"
+            (onClick)="nextStep()"
+            class="next"
+          />
+        </div>
+      </form>
+    </app-steps>
   </div>
 
   <div class="checkout__summary"></div>

@@ -1,0 +1,10 @@
+<section class="steps">
+  <nav class="steps__header">
+    @for(step of steps(); track step){
+    <span (click)="onChangeStep(step.step)" [class.active]="step.active">{{
+      step.label | transformCase : 'upper'
+    }}</span>
+    }
+  </nav>
+  <ng-content select="[content]"></ng-content>
+</section>

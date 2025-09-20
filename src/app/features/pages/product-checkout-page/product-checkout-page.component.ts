@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import {
   CheckoutDataFormComponent,
   CheckoutShippingFormComponent,
@@ -17,12 +17,15 @@ import {
 } from '@interface/enums';
 import { CheckoutPaymentFormComponent } from './components/checkout-payment-form';
 import { Router } from '@angular/router';
+import { StepsComponent } from '@shared/steps';
+import { Steps } from '@interface/interfaces';
 
 @Component({
   selector: 'app-product-checkout-page',
   imports: [
     ReactiveFormsModule,
     BoxButtonComponent,
+    StepsComponent,
     CheckoutDataFormComponent,
     CheckoutShippingFormComponent,
     CheckoutPaymentFormComponent,
@@ -40,17 +43,20 @@ export class ProductCheckoutPageComponent {
   readonly sizeControl = BoxButtonSize;
   readonly typeSteps = StepsCheckoutEnum;
 
-  readonly listSteps = [
+  readonly listSteps: Steps[] = [
     {
       step: StepsCheckoutEnum.INFORMATION,
+      label: 'Información',
       active: true,
     },
     {
       step: StepsCheckoutEnum.SHIPPING,
+      label: 'Envío',
       active: false,
     },
     {
       step: StepsCheckoutEnum.PAYMENT,
+      label: 'Pago',
       active: false,
     },
   ];
@@ -82,19 +88,48 @@ export class ProductCheckoutPageComponent {
     });
   }
 
-  get customerForm(): FormGroup {
-    return this.checkoutForm.get('customer') as FormGroup;
+  get currentStepIndex(): number {
+    return this.listSteps.findIndex((s) => s.active);
   }
 
-  get shippingForm(): FormGroup {
-    return this.checkoutForm.get('shipping') as FormGroup;
+  get currentStep(): Steps {
+    return this.listSteps[this.currentStepIndex];
   }
 
-  get paymentForm(): FormGroup {
-    return this.checkoutForm.get('payment') as FormGroup;
+  getForm(form: string): FormGroup {
+    return this.checkoutForm.get(form) as FormGroup;
   }
 
-  onChangeStep(step: StepsCheckoutEnum) {
+  nextStep() {
+    const index = this.currentStepIndex;
+    const isValidFormStep = this.#onCheckFormFields();
+    if (index < this.listSteps.length - 1 && isValidFormStep) {
+      this.#onChangeStep(this.listSteps[index + 1].step);
+    }
+  }
+
+  prevStep() {
+    const index = this.currentStepIndex;
+    if (index > 0) {
+      this.#onChangeStep(this.listSteps[index - 1].step);
+    }
+  }
+
+  #getCurrentForm(): FormGroup {
+    const stepKeys = ['customer', 'shipping', 'payment'] as const;
+    return this.getForm(stepKeys[this.currentStepIndex]);
+  }
+
+  #onCheckFormFields(): boolean {
+    const form = this.#getCurrentForm();
+    if (form.invalid) {
+      form.markAllAsTouched();
+      return false;
+    }
+    return true;
+  }
+
+  #onChangeStep(step: StepsCheckoutEnum) {
     this.listSteps.forEach((s) => (s.active = s.step === step));
   }
 }
