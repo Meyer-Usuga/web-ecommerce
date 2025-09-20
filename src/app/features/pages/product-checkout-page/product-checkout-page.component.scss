@@ -1,0 +1,49 @@
+@use 'utils';
+
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: utils.pxToRem(40px);
+  margin-bottom: utils.pxToRem(40px);
+  @include utils.container();
+
+  &__data {
+    display: flex;
+    width: 100%;
+    max-width: utils.pxToRem(500px);
+    flex-direction: column;
+    gap: utils.pxToRem(16px);
+
+    .back {
+      font-size: utils.pxToRem(24px);
+      cursor: pointer;
+    }
+
+    .steps {
+      display: flex;
+      gap: utils.pxToRem(24px);
+      padding: 0;
+      margin-top: 0;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: utils.pxToRem(16px);
+
+      .inactive {
+        display: none;
+      }
+
+      .continue-button {
+        display: grid;
+        grid-template-areas: '. button';
+        grid-template-columns: 1fr 1fr;
+
+        app-box-button {
+          grid-area: button;
+        }
+      }
+    }
+  }
+}

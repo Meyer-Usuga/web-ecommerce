@@ -1,0 +1,81 @@
+<section class="form" [formGroup]="form()">
+  <div class="form__contact">
+    <h1>Información de contacto</h1>
+
+    <div class="fields">
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Correo"
+      />
+    </div>
+
+    <div class="fields">
+      <input
+        id="phone"
+        type="number"
+        formControlName="phone"
+        placeholder="Teléfono"
+      />
+    </div>
+  </div>
+
+  <div class="form__address">
+    <h1>Dirección de envío</h1>
+
+    <div class="fields">
+      <input
+        id="firstName"
+        type="text"
+        formControlName="firstName"
+        placeholder="Nombres"
+      />
+      <input
+        id="lastName"
+        type="text"
+        formControlName="lastName"
+        placeholder="Apellidos"
+      />
+    </div>
+
+    <div class="fields">
+      <input
+        id="country"
+        type="text"
+        formControlName="country"
+        placeholder="País"
+      />
+    </div>
+    <div class="fields">
+      <input
+        id="state"
+        type="text"
+        formControlName="state"
+        placeholder="Departamento"
+      />
+    </div>
+    <div class="fields">
+      <input
+        id="address"
+        type="text"
+        formControlName="address"
+        placeholder="Dirección"
+      />
+    </div>
+    <div class="fields">
+      <input
+        id="city"
+        type="text"
+        formControlName="city"
+        placeholder="Ciudad"
+      />
+      <input
+        id="zipCode"
+        type="text"
+        formControlName="zipCode"
+        placeholder="Código postal"
+      />
+    </div>
+  </div>
+</section>

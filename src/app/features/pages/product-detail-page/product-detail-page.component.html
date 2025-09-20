@@ -20,9 +20,10 @@
       <small>Encuentra tu talla | Guía de medición</small>
 
       <app-box-button
+        text="AÑADIR"
         [sizeControl]="sizeControl.LARGE"
         [typeControl]="typeControl.BUTTON"
-        text="AÑADIR"
+        (onClick)="redirecToCheckout()"
       />
     </div>
   </aside>

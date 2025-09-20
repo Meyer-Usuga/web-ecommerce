@@ -1,0 +1,22 @@
+<section class="form" [formGroup]="form()">
+  <div class="form__contact">
+    <h1>Información de envío</h1>
+
+    <div class="fields">
+      <input
+        id="method"
+        type="text"
+        formControlName="method"
+        placeholder="Método de envío"
+      />
+    </div>
+    <div class="fields">
+      <input
+        id="price"
+        type="number"
+        formControlName="price"
+        placeholder="Costo de envío"
+      />
+    </div>
+  </div>
+</section>

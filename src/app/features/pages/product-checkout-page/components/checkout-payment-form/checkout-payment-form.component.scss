@@ -1,0 +1,25 @@
+@use 'utils';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(16px);
+  width: 100%;
+
+  h1 {
+    font-size: utils.pxToRem(18px);
+    font-weight: 500;
+  }
+
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    gap: utils.pxToRem(16px);
+
+    .fields {
+      display: flex;
+      flex-direction: row;
+      gap: utils.pxToRem(8px);
+    }
+  }
+}

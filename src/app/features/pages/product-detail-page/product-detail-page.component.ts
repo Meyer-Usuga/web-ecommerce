@@ -18,6 +18,7 @@ import {
   SampleProductSizeComponent,
 } from './components';
 import { TransformCasePipe } from '@interface/pipes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -37,6 +38,7 @@ import { TransformCasePipe } from '@interface/pipes';
 export class ProductDetailPageComponent {
   readonly id = input.required<string | undefined>();
 
+  readonly #router = inject(Router);
   readonly #filtersService = inject(FiltersService);
   readonly product = signal<Product | undefined>(undefined);
   readonly activeFilters = signal<ActiveFilters>(
@@ -55,4 +57,8 @@ export class ProductDetailPageComponent {
   }
 
   onChangeSampleImage() {}
+
+  redirecToCheckout() {
+    this.#router.navigate(['/productos/pago', this.id()]);
+  }
 }

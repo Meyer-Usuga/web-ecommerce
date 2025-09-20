@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 html {
   scroll-behavior: smooth;
@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   box-sizing: border-box;
   background-color: #f7f7f7;
@@ -35,5 +35,13 @@ body {
 
   li {
     list-style: none;
+  }
+
+  input {
+    padding: utils.pxToRem(12px) utils.pxToRem(20px);
+    border: 1px solid utils.$color-gray-light;
+    font-size: utils.pxToRem(14px);
+    background: transparent;
+    width: 100%;
   }
 }

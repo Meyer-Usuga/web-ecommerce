@@ -1,0 +1,42 @@
+<section class="form" [formGroup]="form()">
+  <div class="form__payment">
+    <h1>Información de pago</h1>
+
+    <div class="fields">
+      <input
+        id="paymentMethod"
+        type="text"
+        formControlName="method"
+        placeholder="Método de pago"
+      />
+    </div>
+
+    <div class="fields">
+      <input
+        id="cardName"
+        type="text"
+        formControlName="cardName"
+        placeholder="Nombre del títular"
+      />
+    </div>
+
+    <div class="fields">
+      <input
+        id="cardNumber"
+        type="text"
+        formControlName="cardNumber"
+        placeholder="Número de tarjeta"
+      />
+      <input
+        id="expDate"
+        type="text"
+        formControlName="expDate"
+        placeholder="Fecha de expiración"
+      />
+    </div>
+
+    <div class="fields">
+      <input id="cvv" type="text" formControlName="cvv" placeholder="CVV" />
+    </div>
+  </div>
+</section>

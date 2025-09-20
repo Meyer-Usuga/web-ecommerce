@@ -22,6 +22,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'productos/pago/:id',
+    loadComponent: () =>
+      import('@feature/pages/product-checkout-page').then(
+        (c) => c.ProductCheckoutPageComponent
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
