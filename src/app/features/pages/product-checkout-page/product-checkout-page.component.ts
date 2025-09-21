@@ -2,6 +2,8 @@ import { Component, inject, signal } from '@angular/core';
 import {
   CheckoutDataFormComponent,
   CheckoutShippingFormComponent,
+  CheckoutPaymentFormComponent,
+  CheckoutSummaryComponent,
 } from './components';
 import {
   FormBuilder,
@@ -15,10 +17,10 @@ import {
   BoxButtonType,
   StepsCheckoutEnum,
 } from '@interface/enums';
-import { CheckoutPaymentFormComponent } from './components/checkout-payment-form';
 import { Router } from '@angular/router';
 import { StepsComponent } from '@shared/steps';
 import { Steps } from '@interface/interfaces';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-product-checkout-page',
@@ -26,6 +28,7 @@ import { Steps } from '@interface/interfaces';
     ReactiveFormsModule,
     BoxButtonComponent,
     StepsComponent,
+    CheckoutSummaryComponent,
     CheckoutDataFormComponent,
     CheckoutShippingFormComponent,
     CheckoutPaymentFormComponent,
@@ -36,6 +39,7 @@ import { Steps } from '@interface/interfaces';
 })
 export class ProductCheckoutPageComponent {
   readonly #router = inject(Router);
+  readonly #location = inject(Location);
   readonly #formBuilder = new FormBuilder();
   readonly checkoutForm: FormGroup;
 
@@ -113,6 +117,10 @@ export class ProductCheckoutPageComponent {
     if (index > 0) {
       this.#onChangeStep(this.listSteps[index - 1].step);
     }
+  }
+
+  goBack() {
+    this.#location.back();
   }
 
   #getCurrentForm(): FormGroup {

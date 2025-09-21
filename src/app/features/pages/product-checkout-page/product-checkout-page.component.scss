@@ -3,7 +3,7 @@
 .checkout {
   display: flex;
   justify-content: space-between;
-  margin-top: utils.pxToRem(40px);
+  margin-top: utils.pxToRem(20px);
   margin-bottom: utils.pxToRem(40px);
   @include utils.container();
 
@@ -48,5 +48,12 @@
         }
       }
     }
+  }
+
+  &__summary {
+    width: 100%;
+    margin-top: utils.pxToRem(40px);
+    max-width: utils.pxToRem(400px);
+    height: fit-content;
   }
 }

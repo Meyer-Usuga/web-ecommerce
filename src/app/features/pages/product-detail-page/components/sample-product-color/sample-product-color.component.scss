@@ -15,6 +15,10 @@
       height: utils.pxToRem(32px);
       width: utils.pxToRem(32px);
       border: 1px solid utils.$color-gray-light;
+
+      &.active {
+        border: 2px solid red;
+      }
     }
   }
 }

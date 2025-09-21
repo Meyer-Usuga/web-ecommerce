@@ -1,6 +1,6 @@
 <main class="checkout">
   <div class="checkout__data">
-    <p class="back">⟵</p>
+    <p class="back" (click)="goBack()">⟵</p>
     <h1>VERIFICAR</h1>
 
     <app-steps [steps]="listSteps">
@@ -44,5 +44,7 @@
     </app-steps>
   </div>
 
-  <div class="checkout__summary"></div>
+  <div class="checkout__summary">
+    <app-checkout-summary />
+  </div>
 </main>

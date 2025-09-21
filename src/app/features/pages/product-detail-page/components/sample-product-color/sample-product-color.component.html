@@ -2,7 +2,10 @@
   Color
   <div class="block-colors">
     @for(color of sampleColors(); track color){
-    <div [ngStyle]="{ background: color }"></div>
+    <div
+      [ngStyle]="{ background: color.name }"
+      [class.active]="color.isActive"
+    ></div>
     }
   </div>
 </div>

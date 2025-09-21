@@ -1,5 +1,5 @@
 import { NgStyle } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, signal } from '@angular/core';
 import { ImageColor } from '@interface/interfaces';
 
 @Component({
@@ -10,6 +10,7 @@ import { ImageColor } from '@interface/interfaces';
   styleUrl: './sample-product-color.component.scss',
 })
 export class SampleProductColorComponent {
+  readonly activeColor = input<string>();
   readonly colors = input.required<ImageColor[] | undefined>();
   readonly sampleColors = computed(() => {
     return this.#mapColor();
@@ -25,13 +26,16 @@ export class SampleProductColorComponent {
       verde: 'green',
     };
 
-    const mapColors: string[] = [];
     const productColors = this.colors();
 
-    productColors?.forEach((sampleColor) => {
-      mapColors.push(colors[sampleColor.color]);
-    });
-
-    return mapColors;
+    return (
+      productColors?.map((sampleColor) => {
+        const mappedColor = colors[sampleColor.color];
+        return {
+          name: mappedColor,
+          isActive: sampleColor.color === this.activeColor(),
+        };
+      }) || []
+    );
   }
 }

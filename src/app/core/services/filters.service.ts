@@ -1173,6 +1173,34 @@ export class FiltersService {
     });
   }
 
+  getActiveFiltersFromQueryParams(productId: string | undefined) {
+    const activeFilters = this.#activeFilters();
+    console.log(activeFilters);
+    const querySizes = activeFilters!['talla'];
+    const queryColors = activeFilters!['color'];
+
+    const product = this.getProductById(productId);
+
+    if (!product) return [];
+
+    const firstSize = !querySizes ? product.size?.[0] : querySizes[0];
+    const firstColor = !queryColors ? product.color?.[0].color : queryColors[0];
+
+    if (!firstSize || !firstColor) return [];
+
+    const sizeFilter = {
+      label: 'talla',
+      value: firstSize,
+    };
+
+    const colorFilter = {
+      label: 'color',
+      value: firstColor,
+    };
+
+    return [sizeFilter, colorFilter];
+  }
+
   checkActiveFilter(filter: FilterValue) {
     const { label, value } = filter;
     const typeFilter = this.activeFilters[label];

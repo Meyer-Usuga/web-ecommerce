@@ -6,7 +6,7 @@ import {
   input,
   signal,
 } from '@angular/core';
-import { ActiveFilters, Product } from '@interface/interfaces';
+import { ActiveFilters, FilterValue, Product } from '@interface/interfaces';
 import { NavbarComponent } from '@shared/navbar';
 import { ButtonComponent } from '@shared/button';
 import { FiltersService } from '@interface/services';
@@ -44,6 +44,7 @@ export class ProductDetailPageComponent {
   readonly activeFilters = signal<ActiveFilters>(
     this.#filtersService.activeFilters
   );
+  readonly selectedFilters = signal<FilterValue[] | undefined>([]);
 
   readonly typeControl = BoxButtonType;
   readonly sizeControl = BoxButtonSize;
@@ -53,6 +54,11 @@ export class ProductDetailPageComponent {
       const id = this.id();
       const product = this.#filtersService.getProductById(id);
       this.product.set(product);
+      this.selectedFilters.set(
+        this.#filtersService.getActiveFiltersFromQueryParams(id)
+      );
+
+      console.log(this.selectedFilters());
     });
   }
 

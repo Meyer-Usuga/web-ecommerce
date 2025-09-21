@@ -13,9 +13,15 @@
       <h1>${{ product()?.description?.price }}</h1>
       <p>{{ product()?.description?.subtitle }}</p>
 
-      <app-sample-product-color [colors]="product()?.color" />
+      <app-sample-product-color
+        [colors]="product()?.color"
+        [activeColor]="selectedFilters()?.[1]?.value"
+      />
 
-      <app-sample-product-size [sizes]="product()?.size" />
+      <app-sample-product-size
+        [sizes]="product()?.size"
+        [activeSize]="selectedFilters()?.[0]?.value"
+      />
 
       <small>Encuentra tu talla | Guía de medición</small>
 
