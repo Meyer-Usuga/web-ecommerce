@@ -6,10 +6,15 @@ import {
   input,
   signal,
 } from '@angular/core';
-import { ActiveFilters, FilterValue, Product } from '@interface/interfaces';
+import {
+  ActiveFilters,
+  CartItem,
+  FilterValue,
+  Product,
+} from '@interface/interfaces';
 import { NavbarComponent } from '@shared/navbar';
 import { ButtonComponent } from '@shared/button';
-import { FiltersService } from '@interface/services';
+import { CartService, FiltersService } from '@interface/services';
 import { BoxButtonComponent } from '@shared/box-button';
 import { BoxButtonSize, BoxButtonType } from '@interface/enums';
 import {
@@ -19,6 +24,7 @@ import {
 } from './components';
 import { TransformCasePipe } from '@interface/pipes';
 import { Router } from '@angular/router';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -30,6 +36,7 @@ import { Router } from '@angular/router';
     SampleProductSizeComponent,
     SampleProductColorComponent,
     TransformCasePipe,
+    CurrencyPipe,
   ],
   standalone: true,
   templateUrl: './product-detail-page.component.html',
@@ -39,6 +46,7 @@ export class ProductDetailPageComponent {
   readonly id = input.required<string | undefined>();
 
   readonly #router = inject(Router);
+  readonly #cartService = inject(CartService);
   readonly #filtersService = inject(FiltersService);
   readonly product = signal<Product | undefined>(undefined);
   readonly activeFilters = signal<ActiveFilters>(
@@ -57,14 +65,32 @@ export class ProductDetailPageComponent {
       this.selectedFilters.set(
         this.#filtersService.getActiveFiltersFromQueryParams(id)
       );
-
-      console.log(this.selectedFilters());
     });
+  }
+
+  #saveCart() {
+    const product = this.product();
+    const size = this.selectedFilters()?.[0]?.value;
+    const color = this.selectedFilters()?.[1]?.value;
+
+    if (!product || !size || !color) {
+      return;
+    }
+
+    const cartItem: CartItem = {
+      ...product,
+      sizeSelected: size,
+      colorSelected: color,
+      quantity: 1,
+    };
+
+    this.#cartService.saveProduct(cartItem);
   }
 
   onChangeSampleImage() {}
 
   redirecToCheckout() {
+    this.#saveCart();
     this.#router.navigate(['/productos/pago', this.id()]);
   }
 }

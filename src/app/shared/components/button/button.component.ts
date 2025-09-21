@@ -1,7 +1,7 @@
 import { NgStyle } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
-type InputType = 'primary' | 'secondary' | 'underline';
+type InputType = 'primary' | 'secondary' | 'underline' | 'bottomless';
 
 @Component({
   selector: 'app-button',
@@ -14,5 +14,10 @@ export class ButtonComponent {
   readonly text = input<string>();
   readonly icon = input<string>();
   readonly type = input<InputType>();
+  readonly onClick = output<void>();
   readonly customStyles = input<{ [key: string]: string } | {}>();
+
+  handleClickButton() {
+    this.onClick.emit();
+  }
 }

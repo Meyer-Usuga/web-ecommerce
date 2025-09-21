@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .button {
   border: none;
@@ -23,5 +23,9 @@
 
   &.secondary {
     background-color: utils.$color-white;
+  }
+
+  &.bottomless {
+    background-color: transparent;
   }
 }

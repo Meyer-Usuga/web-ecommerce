@@ -1,54 +1,50 @@
 <aside class="summary">
   <div class="summary__quantity">
-    <span>(2)</span>
+    <span>({{ cart().items.length }})</span>
   </div>
 
   <div class="summary__content">
     <h2 class="summary__title">Tu orden</h2>
 
+    @for(product of cart().items; track product){
     <div class="summary__product">
+      <app-button
+        icon="close.svg"
+        type="bottomless"
+        class="summary__product--remove"
+        (onClick)="onRemoveProduct(product.id)"
+      />
       <div class="summary__product--image">
         <img
-          src="https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png"
-          alt="Imagen del producto"
+          [src]="product | transformProductImage"
+          alt="Producto del carrito"
         />
       </div>
 
       <div class="summary__product--description">
-        <p>Camisa manga larga</p>
-        <span>$ 49.99</span>
-        <span>Cantidad: 1</span>
+        <p>{{ product.description?.title }}</p>
+        <span>{{ product.colorSelected }}/{{ product.sizeSelected }}</span>
+        <span>${{ product.description?.price | currency : 'COP' : '' }}</span>
+        <span>Cantidad: {{ product.quantity }}</span>
       </div>
     </div>
+    }
+  </div>
 
-    <div class="summary__product">
-      <div class="summary__product--image">
-        <img
-          src="https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png"
-          alt="Imagen del producto"
-        />
-      </div>
-
-      <div class="summary__product--description">
-        <p>Camisa manga larga</p>
-        <span>$ 49.99</span>
-        <span>Cantidad: 1</span>
-      </div>
-    </div>
-
+  <div class="summary__data">
     <hr />
-    <div class="summary__subtotal">
+    <div class="summary__data--block">
       <p>Subtotal</p>
-      <span>$ 99.98</span>
+      <span>$ {{ totalProducts() | currency : 'COP' : '' }} </span>
     </div>
-    <div class="summary__shipping">
+    <div class="summary__data--block shipping">
       <p>Shipping</p>
       <span>$ 0</span>
     </div>
     <hr />
-    <div class="summary__total">
+    <div class="summary__data--block">
       <p>Total</p>
-      <span>$ 99.98</span>
+      <span>${{ totalProducts() | currency : 'COP' : '' }}</span>
     </div>
   </div>
 </aside>

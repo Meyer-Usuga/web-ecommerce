@@ -82,21 +82,21 @@ export class FiltersService {
     prices: [
       {
         label: '90.000 - 120.000',
-        value: '90.000-120.000',
+        value: '90000-120000',
       },
       {
         label: '120.000 - 150.000',
-        value: '120.000-150.000',
+        value: '120000-150000',
       },
       {
         label: '150.000 - 180.000',
-        value: '150.000-180.000',
+        value: '150000-180000',
       },
       {
         label: '180.000 - 210.000',
-        value: '180.000-210.000',
+        value: '180000-210000',
       },
-      { label: '> 210.000', value: '>210.000' },
+      { label: '> 210.000', value: '210000' },
     ],
     ratings: [
       { label: '1 estrella', value: '1' },
@@ -118,7 +118,7 @@ export class FiltersService {
       description: {
         title: 'V-Neck T-Shirt',
         subtitle: 'Embroidered Seersucker Shirt',
-        price: '99',
+        price: '99000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -157,7 +157,7 @@ export class FiltersService {
       description: {
         title: 'Cotton T Shirt',
         subtitle: 'Basic Slim Fit T-Shirt',
-        price: '120',
+        price: '120000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -186,7 +186,7 @@ export class FiltersService {
       description: {
         title: 'Henley T-Shirt',
         subtitle: 'Blurred Print T-Shirt',
-        price: '180',
+        price: '180000',
       },
       size: ['XS', 'S', '2X'],
       color: [
@@ -220,7 +220,7 @@ export class FiltersService {
       description: {
         title: 'Crewneck T-Shirt',
         subtitle: 'Full Sleeve Zipper',
-        price: '210',
+        price: '210000',
       },
       size: ['XS', '2X'],
       color: [
@@ -254,7 +254,7 @@ export class FiltersService {
       description: {
         title: 'Basic Hoodie',
         subtitle: 'Casual Wear',
-        price: '110',
+        price: '110000',
       },
       size: ['S', 'M'],
       color: [
@@ -288,7 +288,7 @@ export class FiltersService {
       description: {
         title: 'Slim Fit Polo',
         subtitle: 'Casual Line',
-        price: '90',
+        price: '90000',
       },
       size: ['XS', 'S'],
       color: [
@@ -322,7 +322,7 @@ export class FiltersService {
       description: {
         title: 'Classic Pants',
         subtitle: 'Slim Fit',
-        price: '130',
+        price: '130000',
       },
       size: ['XS', 'XL', '2X'],
       color: [
@@ -356,7 +356,7 @@ export class FiltersService {
       description: {
         title: 'Denim Jacket',
         subtitle: 'Casual Blue Denim',
-        price: '250',
+        price: '250000',
       },
       size: ['XS', 'S', 'M', 'L'],
       color: [
@@ -390,7 +390,7 @@ export class FiltersService {
       description: {
         title: 'Leather Pants',
         subtitle: 'Premium Quality',
-        price: '320',
+        price: '320000',
       },
       size: ['XS', 'S', 'M'],
       color: [
@@ -424,7 +424,7 @@ export class FiltersService {
       description: {
         title: 'Oversized Hoodie',
         subtitle: 'Streetwear Style',
-        price: '140',
+        price: '140000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -458,7 +458,7 @@ export class FiltersService {
       description: {
         title: 'Classic Polo',
         subtitle: 'Soft Cotton',
-        price: '80',
+        price: '80000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -492,7 +492,7 @@ export class FiltersService {
       description: {
         title: 'Casual T-Shirt',
         subtitle: 'Graphic Print',
-        price: '115',
+        price: '115000',
       },
       size: ['XS', 'S', 'M', 'L', '2X'],
       color: [
@@ -526,7 +526,7 @@ export class FiltersService {
       description: {
         title: 'Basic Crewneck',
         subtitle: 'Comfort Fit',
-        price: '95',
+        price: '95000',
       },
       size: ['XS', 'S'],
       color: [
@@ -560,7 +560,7 @@ export class FiltersService {
       description: {
         title: 'Crewneck T-Shirt',
         subtitle: 'Full Sleeve Zipper',
-        price: '150',
+        price: '150000',
       },
       size: ['L'],
       color: [
@@ -594,7 +594,7 @@ export class FiltersService {
       description: {
         title: 'Slim Pants',
         subtitle: 'Casual Line',
-        price: '175',
+        price: '175000',
       },
       size: ['S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -628,7 +628,7 @@ export class FiltersService {
       description: {
         title: 'Sport Hoodie',
         subtitle: 'Active Wear',
-        price: '200',
+        price: '200000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL'],
       color: [
@@ -662,7 +662,7 @@ export class FiltersService {
       description: {
         title: 'Casual Jacket',
         subtitle: 'Zippered Design',
-        price: '180',
+        price: '180000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -696,7 +696,7 @@ export class FiltersService {
       description: {
         title: 'Casual Shirt',
         subtitle: 'Lightweight Fabric',
-        price: '125',
+        price: '125000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -730,7 +730,7 @@ export class FiltersService {
       description: {
         title: 'Oxford Shirt',
         subtitle: 'Classic Button Down',
-        price: '135',
+        price: '135000',
       },
       size: ['XS', 'S', 'M'],
       color: [
@@ -764,7 +764,7 @@ export class FiltersService {
       description: {
         title: 'Basic Hoodie',
         subtitle: 'Urban Style',
-        price: '160',
+        price: '160000',
       },
       size: ['2X'],
       color: [
@@ -798,7 +798,7 @@ export class FiltersService {
       description: {
         title: 'Slim Fit Polo',
         subtitle: 'Premium Cotton',
-        price: '150',
+        price: '150000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -832,7 +832,7 @@ export class FiltersService {
       description: {
         title: 'Chino Pants',
         subtitle: 'Slim Casual',
-        price: '140',
+        price: '140000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -866,7 +866,7 @@ export class FiltersService {
       description: {
         title: 'Casual Jacket',
         subtitle: 'Lightweight Windbreaker',
-        price: '210',
+        price: '210000',
       },
       size: ['M', 'L', 'XL', '2X'],
       color: [
@@ -900,7 +900,7 @@ export class FiltersService {
       description: {
         title: 'V-Neck T-Shirt',
         subtitle: 'Casual Cotton',
-        price: '85',
+        price: '85000',
       },
       size: ['XS', 'S'],
       color: [
@@ -934,7 +934,7 @@ export class FiltersService {
       description: {
         title: 'Classic Polo',
         subtitle: 'Sport Line',
-        price: '95',
+        price: '95000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -968,7 +968,7 @@ export class FiltersService {
       description: {
         title: 'Cargo Pants',
         subtitle: 'Utility Fit',
-        price: '180',
+        price: '180000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -1002,7 +1002,7 @@ export class FiltersService {
       description: {
         title: 'Sport Hoodie',
         subtitle: 'Active Line',
-        price: '170',
+        price: '170000',
       },
       size: ['XS', '2X'],
       color: [
@@ -1036,7 +1036,7 @@ export class FiltersService {
       description: {
         title: 'Casual Shirt',
         subtitle: 'Linen Fabric',
-        price: '190',
+        price: '190000',
       },
       size: ['XS', 'S', 'M', 'L', 'XL', '2X'],
       color: [
@@ -1114,6 +1114,22 @@ export class FiltersService {
     return words.every((token) => searchable.includes(token));
   }
 
+  #filterByPrice(product: Product, value: string[]): boolean {
+    if (!product.description?.price) return false;
+
+    const productPrice = Number(product.description.price);
+
+    return value.some((range) => {
+      if (range.includes('-')) {
+        const [min, max] = range.split('-').map(Number);
+        return productPrice >= min && productPrice <= max;
+      } else {
+        const min = Number(range);
+        return productPrice > min;
+      }
+    });
+  }
+
   #applyFilters(activeFilters: ActiveFilters | undefined): Product[] {
     if (!activeFilters || Object.keys(activeFilters).length === 0) {
       return this.#products;
@@ -1139,6 +1155,8 @@ export class FiltersService {
             return values.includes(product.rating ?? '');
           case 'busqueda':
             return this.#filterByText(product, values);
+          case 'precio':
+            return this.#filterByPrice(product, values);
           default:
             return true;
         }
@@ -1175,7 +1193,6 @@ export class FiltersService {
 
   getActiveFiltersFromQueryParams(productId: string | undefined) {
     const activeFilters = this.#activeFilters();
-    console.log(activeFilters);
     const querySizes = activeFilters!['talla'];
     const queryColors = activeFilters!['color'];
 

@@ -9,7 +9,6 @@ export interface ImageColor {
   imageUrl: string;
 }
 
-//TODO: Las propiedades size, color, deberían ser listas, ya que pueden tener variaciones
 export interface Product {
   id: string;
   imageUrl: string;
