@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { checkoutGuard } from '@interface/guards';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,7 @@ export const routes: Routes = [
       import('@feature/pages/product-checkout-page').then(
         (c) => c.ProductCheckoutPageComponent
       ),
+    canActivate: [checkoutGuard],
   },
   {
     path: '**',
