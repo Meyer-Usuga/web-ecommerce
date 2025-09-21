@@ -1,6 +1,6 @@
 import { NgStyle } from '@angular/common';
-import { Component, computed, input, signal } from '@angular/core';
-import { ImageColor } from '@interface/interfaces';
+import { Component, computed, input, output, signal } from '@angular/core';
+import { FilterValue, ImageColor } from '@interface/interfaces';
 
 @Component({
   selector: 'app-sample-product-color',
@@ -11,6 +11,7 @@ import { ImageColor } from '@interface/interfaces';
 })
 export class SampleProductColorComponent {
   readonly activeColor = input<string>();
+  readonly onChangeColor = output<FilterValue>();
   readonly colors = input.required<ImageColor[] | undefined>();
   readonly sampleColors = computed(() => {
     return this.#mapColor();
@@ -33,9 +34,18 @@ export class SampleProductColorComponent {
         const mappedColor = colors[sampleColor.color];
         return {
           name: mappedColor,
+          originalName: sampleColor.color,
           isActive: sampleColor.color === this.activeColor(),
         };
       }) || []
     );
+  }
+
+  onChangeFilter(key: string, value: string) {
+    const filter: FilterValue = {
+      label: key,
+      value: value,
+    };
+    this.onChangeColor.emit(filter);
   }
 }

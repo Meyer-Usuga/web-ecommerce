@@ -58,13 +58,6 @@ export class ProductListPageComponent {
     this.#filtersService.updateQueryParams(filter);
   }
 
-  /** TODO: Al momento de dar click, y cargar en el detalle,
-   * setear el size y color activo según los activeFilters,
-   * si hay más de 1 filtro activo, tomar el primero,
-   * si no hay ninguno, tomar el primer valor disponible del producto.
-   * y que el usuario pueda cambiarlo en el detalle.
-   */
-
   redirectToDetail(productId: string) {
     this.#router.navigate(['/productos/detalle', productId], {
       queryParamsHandling: 'preserve',

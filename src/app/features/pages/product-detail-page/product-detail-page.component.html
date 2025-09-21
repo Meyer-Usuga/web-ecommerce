@@ -16,11 +16,13 @@
       <app-sample-product-color
         [colors]="product()?.color"
         [activeColor]="selectedFilters()?.[1]?.value"
+        (onChangeColor)="onSelectFilter($event)"
       />
 
       <app-sample-product-size
         [sizes]="product()?.size"
         [activeSize]="selectedFilters()?.[0]?.value"
+        (onChangeSize)="onSelectFilter($event)"
       />
 
       <small>Encuentra tu talla | Guía de medición</small>

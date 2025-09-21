@@ -8,6 +8,7 @@
       [sizeControl]="sizeControl.SMALL"
       [text]="size"
       [checked]="size === activeSize()"
+      (onClick)="onChangeFilter('talla', size)"
     />
     }
   </div>

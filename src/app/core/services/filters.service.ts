@@ -1106,7 +1106,7 @@ export class FiltersService {
       product.size?.join(' '),
       product.availability,
       product.rating,
-      product.description?.price?.toString()
+      product.description?.price?.toString(),
     ]
       .filter(Boolean)
       .join(' ')
@@ -1165,10 +1165,11 @@ export class FiltersService {
     });
   }
 
-  updateQueryParams(filter: FilterValue) {
+  updateQueryParams(filter: FilterValue, activeSingleValue?: boolean) {
     const { label, value } = filter;
 
-    const isSingleValue = this.#singleValueParams.includes(label);
+    const isSingleValue =
+      this.#singleValueParams.includes(label) || activeSingleValue;
 
     const current = this.#activatedRoute.snapshot.queryParamMap.getAll(label);
 

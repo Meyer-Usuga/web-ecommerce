@@ -5,6 +5,7 @@
     <div
       [ngStyle]="{ background: color.name }"
       [class.active]="color.isActive"
+      (click)="onChangeFilter('color', color.originalName)"
     ></div>
     }
   </div>

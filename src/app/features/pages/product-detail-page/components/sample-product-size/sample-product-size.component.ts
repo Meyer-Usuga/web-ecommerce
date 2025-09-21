@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { BoxButtonSize, BoxButtonType } from '@interface/enums';
+import { FilterValue } from '@interface/interfaces';
 import { BoxButtonComponent } from '@shared/box-button';
 
 @Component({
@@ -11,11 +12,16 @@ import { BoxButtonComponent } from '@shared/box-button';
 })
 export class SampleProductSizeComponent {
   readonly activeSize = input<string>();
+  readonly onChangeSize = output<FilterValue>();
   readonly sizes = input.required<string[] | undefined>();
   readonly typeControl = BoxButtonType;
   readonly sizeControl = BoxButtonSize;
 
-  constructor() {
-    console.log(this.activeSize());
+  onChangeFilter(key: string, value: string) {
+    const filter: FilterValue = {
+      label: key,
+      value: value,
+    };
+    this.onChangeSize.emit(filter);
   }
 }

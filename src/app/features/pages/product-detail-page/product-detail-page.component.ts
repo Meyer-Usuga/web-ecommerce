@@ -89,6 +89,11 @@ export class ProductDetailPageComponent {
 
   onChangeSampleImage() {}
 
+  onSelectFilter(filter: FilterValue) {
+    const activeSingleValue = true;
+    this.#filtersService.updateQueryParams(filter, activeSingleValue);
+  }
+
   redirecToCheckout() {
     this.#saveCart();
     this.#router.navigate(['/productos/pago', this.id()]);
