@@ -1106,6 +1106,7 @@ export class FiltersService {
       product.size?.join(' '),
       product.availability,
       product.rating,
+      product.description?.price?.toString()
     ]
       .filter(Boolean)
       .join(' ')
