@@ -152,7 +152,7 @@ export class FiltersService {
     {
       id: 'A-2',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_qkedqzqkedqzqked_wbxbdy.png',
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Cotton T Shirt',
@@ -163,12 +163,12 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_qkedqzqkedqzqked_wbxbdy.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757911745/Rectangle_3_6_i9w06h.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_qkedqzqkedqzqked_wbxbdy.png',
           color: 'blanco',
         },
       ],
@@ -249,7 +249,7 @@ export class FiltersService {
     {
       id: 'B-1',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506021/Gemini_Generated_Image_7f0xbr7f0xbr7f0x_fozsea.png',
       alt: 'Producto especial',
       description: {
         title: 'Basic Hoodie',
@@ -260,17 +260,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506021/Gemini_Generated_Image_7f0xbr7f0xbr7f0x_fozsea.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506021/Gemini_Generated_Image_7f0xbr7f0xbr7f0x_fozsea.png',
           color: 'rojo',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_1_mrgtvg.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506021/Gemini_Generated_Image_7f0xbr7f0xbr7f0x_fozsea.png',
           color: 'blanco',
         },
       ],
@@ -623,7 +623,7 @@ export class FiltersService {
     {
       id: 'C-2',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_bhtninbhtninbhtn_zwidqm.png',
       alt: 'Edición especial limitada',
       description: {
         title: 'Sport Hoodie',
@@ -634,17 +634,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_bhtninbhtninbhtn_zwidqm.png',
           color: 'naranja',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_bhtninbhtninbhtn_zwidqm.png',
           color: 'rojo',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506024/Gemini_Generated_Image_bhtninbhtninbhtn_zwidqm.png',
           color: 'negro',
         },
       ],
@@ -759,7 +759,7 @@ export class FiltersService {
     {
       id: 'C-6',
       imageUrl:
-        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+        'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506447/Gemini_Generated_Image_may7wamay7wamay7_pmc33x.png',
       alt: 'Producto con descuento',
       description: {
         title: 'Basic Hoodie',
@@ -770,17 +770,17 @@ export class FiltersService {
       color: [
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506447/Gemini_Generated_Image_may7wamay7wamay7_pmc33x.png',
           color: 'negro',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506447/Gemini_Generated_Image_may7wamay7wamay7_pmc33x.png',
           color: 'rojo',
         },
         {
           imageUrl:
-            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1757732159/Rectangle_3_2_z3eslv.png',
+            'https://res.cloudinary.com/db1tp6eqg/image/upload/v1758506447/Gemini_Generated_Image_may7wamay7wamay7_pmc33x.png',
           color: 'azul',
         },
       ],
