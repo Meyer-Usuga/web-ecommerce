@@ -22,7 +22,9 @@
   }
 
   &.secondary {
-    background-color: utils.$color-white;
+    width: 100%;
+    border-radius: utils.pxToRem(16px);
+    background-color: utils.$color-bg;
   }
 
   &.bottomless {

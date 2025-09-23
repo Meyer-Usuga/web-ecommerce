@@ -1,0 +1,35 @@
+<div class="controls">
+  <app-button
+    icon="close.svg"
+    type="bottomless"
+    class="summary__product--remove"
+    (onClick)="onRemoveProduct()"
+  />
+
+  <div class="controls__params">
+    <h1>{{ product().sizeSelected }}</h1>
+
+    <div
+      class="sample-color"
+      [ngStyle]="product().colorSelected | transformColors"
+    ></div>
+
+    <div class="quantity">
+      <app-box-button
+        text="+"
+        [typeControl]="typeControl.BUTTON"
+        (onClick)="changeQuantity({ action: 'sum' })"
+      />
+      <app-box-button
+        [text]="updatedQuantity()"
+        [typeControl]="typeControl.BUTTON"
+      />
+      <app-box-button
+        text="-"
+        [typeControl]="typeControl.BUTTON"
+        [disabled]="updatedQuantity() == 1"
+        (onClick)="changeQuantity({ action: 'rest' })"
+      />
+    </div>
+  </div>
+</div>

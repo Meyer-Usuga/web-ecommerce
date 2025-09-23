@@ -1,0 +1,66 @@
+<app-navbar />
+
+<main class="cart">
+  <app-steps [steps]="listSteps" (onChange)="onChangeStep($event)">
+    <section
+      content
+      class="cart__shopping"
+      [class.inactive]="!listSteps[0].active"
+    >
+      @if(cart().items.length > 0){
+      <div class="cart__shopping--items">
+        @for(product of cart().items; track product){
+        <div class="item">
+          <app-product [product]="product | transformCartItem" />
+          <app-product-controls
+            [product]="product"
+            (onRemove)="onRemoveProduct($event)"
+            (onChangeQuantity)="onSaveProduct($event)"
+          />
+        </div>
+        }
+      </div>
+      <aside class="cart__shopping--summary">
+        <h1>Resumen de orden</h1>
+        <div class="block">
+          <p>Subtotal</p>
+          <p>${{ total() | currency : 'COP' : '' }}</p>
+        </div>
+        <div class="block">
+          <p>Envio</p>
+          <p>$0</p>
+        </div>
+        <hr />
+        <div class="block">
+          <h1>Total</h1>
+          <p>${{ total() | currency : 'COP' : '' }}</p>
+        </div>
+        <div class="block">
+          <app-box-button
+            [typeControl]="typeControl.CHECKBOX"
+            (onClick)="handleTerms()"
+            (checked)="acceptTerms()"
+          />
+          <span>Estoy de acuerdo con los términos y condiciones.</span>
+        </div>
+        <app-box-button
+          text="Continuar"
+          [typeControl]="typeControl.BUTTON"
+          [sizeControl]="sizeControl.LARGE"
+          [disabled]="!acceptTerms()"
+        />
+      </aside>
+      } @else {
+      <app-empty-cart ngSkipHydration />
+      }
+    </section>
+    <section
+      content
+      class="cart__favourites"
+      [class.inactive]="!listSteps[1].active"
+    >
+      <div class="cart__favourites--items"></div>
+    </section>
+    <hr />
+  </app-steps>
+</main>

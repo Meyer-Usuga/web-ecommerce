@@ -1,5 +1,5 @@
 import { Component, input, output, signal } from '@angular/core';
-import { StepsCheckoutEnum } from '@interface/enums';
+import { StepsEnum } from '@interface/enums';
 import { Steps } from '@interface/interfaces';
 import { TransformCasePipe } from '@interface/pipes';
 
@@ -12,10 +12,10 @@ import { TransformCasePipe } from '@interface/pipes';
 })
 export class StepsComponent {
   readonly steps = input.required<Steps[]>();
-  readonly onChange = output<StepsCheckoutEnum>();
-  readonly typeSteps = StepsCheckoutEnum;
+  readonly onChange = output<StepsEnum>();
+  readonly typeSteps = StepsEnum;
 
-  onChangeStep(step: StepsCheckoutEnum) {
+  onChangeStep(step: StepsEnum) {
     this.onChange.emit(step);
   }
 }

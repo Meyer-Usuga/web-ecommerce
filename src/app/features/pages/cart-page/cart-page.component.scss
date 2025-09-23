@@ -1,0 +1,70 @@
+@use 'utils';
+
+.cart {
+  @include utils.container();
+
+  &__shopping {
+    display: flex;
+    justify-content: space-between;
+
+    &--items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+      gap: utils.pxToRem(48px);
+      margin-top: utils.pxToRem(24px);
+      margin-bottom: utils.pxToRem(32px);
+      width: 100%;
+      max-width: utils.pxToRem(760px);
+      align-items: center;
+
+      .item {
+        display: flex;
+        gap: utils.pxToRem(8px);
+        align-items: center;
+      }
+    }
+
+    &--summary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid utils.$color-gray-light;
+      min-height: utils.pxToRem(350px);
+      padding: 0 utils.pxToRem(48px) 0 utils.pxToRem(48px);
+      gap: utils.pxToRem(24px);
+      max-height: utils.pxToRem(450px);
+    }
+  }
+
+  span {
+    font-size: utils.pxToRem(14px);
+  }
+
+  p {
+    font-size: utils.pxToRem(16px);
+    font-weight: 500;
+    color: utils.$color-gray;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid utils.$color-gray-light;
+    margin: utils.pxToRem(10px) 0;
+  }
+
+  h1 {
+    font-size: utils.pxToRem(20px);
+  }
+
+  .block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: utils.pxToRem(8px);
+  }
+
+  .inactive {
+    display: none;
+  }
+}

@@ -18,7 +18,7 @@
 
     <div class="price">
       <p>{{ description?.subtitle }}</p>
-      <p>${{ description?.price }}</p>
+      <p>${{ description?.price | currency : 'COP' : '' }}</p>
     </div>
 
     @if(showColorDots()){

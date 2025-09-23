@@ -8,9 +8,22 @@ export class CartService {
   readonly #cartKey = 'cart';
   readonly #storage = typeof localStorage !== 'undefined';
   readonly #cart = signal<Cart>(this.#getStorage());
+  readonly #total = computed(() => {
+    const cart = this.#cart();
+    const total = cart.items.reduce((acc, item) => {
+      const price = Number(item.description?.price ?? 0);
+      const quantity = item.quantity ?? 1;
+      return acc + price * quantity;
+    }, 0);
+    return total;
+  });
 
   get cart() {
     return this.#cart.asReadonly();
+  }
+
+  get total() {
+    return this.#total;
   }
 
   #setStorage(product: CartItem) {
@@ -22,8 +35,6 @@ export class CartService {
 
       if (index !== -1) {
         items[index] = product;
-        items[index].quantity =
-          (items[index].quantity || 1) + (product.quantity || 1);
       } else {
         items.push(product);
       }

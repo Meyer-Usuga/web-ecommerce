@@ -12,11 +12,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { BoxButtonComponent } from '@shared/box-button';
-import {
-  BoxButtonSize,
-  BoxButtonType,
-  StepsCheckoutEnum,
-} from '@interface/enums';
+import { BoxButtonSize, BoxButtonType, StepsEnum } from '@interface/enums';
 import { Router } from '@angular/router';
 import { StepsComponent } from '@shared/steps';
 import { Steps } from '@interface/interfaces';
@@ -45,21 +41,21 @@ export class ProductCheckoutPageComponent {
 
   readonly typeControl = BoxButtonType;
   readonly sizeControl = BoxButtonSize;
-  readonly typeSteps = StepsCheckoutEnum;
+  readonly typeSteps = StepsEnum;
 
   readonly listSteps: Steps[] = [
     {
-      step: StepsCheckoutEnum.INFORMATION,
+      step: StepsEnum.INFORMATION,
       label: 'Información',
       active: true,
     },
     {
-      step: StepsCheckoutEnum.SHIPPING,
+      step: StepsEnum.SHIPPING,
       label: 'Envío',
       active: false,
     },
     {
-      step: StepsCheckoutEnum.PAYMENT,
+      step: StepsEnum.PAYMENT,
       label: 'Pago',
       active: false,
     },
@@ -123,6 +119,12 @@ export class ProductCheckoutPageComponent {
     this.#location.back();
   }
 
+  submit() {
+    if (this.checkoutForm.valid && this.currentStep.step === 'payment') {
+      this.#router.navigate(['/carrito']);
+    }
+  }
+
   #getCurrentForm(): FormGroup {
     const stepKeys = ['customer', 'shipping', 'payment'] as const;
     return this.getForm(stepKeys[this.currentStepIndex]);
@@ -137,7 +139,7 @@ export class ProductCheckoutPageComponent {
     return true;
   }
 
-  #onChangeStep(step: StepsCheckoutEnum) {
+  #onChangeStep(step: StepsEnum) {
     this.listSteps.forEach((s) => (s.active = s.step === step));
   }
 }

@@ -14,13 +14,7 @@ import { ButtonComponent } from '@shared/button';
 export class CheckoutSummaryComponent {
   readonly #cartService = inject(CartService);
   readonly cart = this.#cartService.cart;
-  readonly totalProducts = computed(() => {
-    return this.cart().items.reduce((acc, item) => {
-      const price = Number(item.description?.price ?? 0);
-      const quantity = item.quantity ?? 1;
-      return acc + price * quantity;
-    }, 0);
-  });
+  readonly total = this.#cartService.total;
 
   onRemoveProduct(productId: string) {
     this.#cartService.removeProduct(productId);

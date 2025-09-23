@@ -31,6 +31,11 @@ export const routes: Routes = [
     canActivate: [checkoutGuard],
   },
   {
+    path: 'carrito',
+    loadComponent: () =>
+      import('@feature/pages/cart-page').then((c) => c.CartPageComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

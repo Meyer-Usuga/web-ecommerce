@@ -4,4 +4,5 @@ export * from './collection.interface';
 export * from './reviews.inteface';
 export * from './filters.interface';
 export * from './cart.interface';
+export * from './controls.interface';
 export * from './breadcrumb.interface';

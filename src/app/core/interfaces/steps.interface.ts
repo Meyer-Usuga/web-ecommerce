@@ -1,7 +1,7 @@
-import { StepsCheckoutEnum } from '@interface/enums';
+import { StepsEnum } from '@interface/enums';
 
 export interface Steps {
-  step: StepsCheckoutEnum;
+  step: StepsEnum;
   label: string;
   active: boolean;
 }

@@ -1,10 +1,10 @@
-import { NgStyle } from '@angular/common';
+import { CurrencyPipe, NgStyle } from '@angular/common';
 import { Component, computed, input, output } from '@angular/core';
 import { Product } from '@interface/interfaces';
 
 @Component({
   selector: 'app-product',
-  imports: [NgStyle],
+  imports: [NgStyle, CurrencyPipe],
   standalone: true,
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss',

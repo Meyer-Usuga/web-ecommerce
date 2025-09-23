@@ -8,7 +8,7 @@ import { BoxButtonType, BoxButtonSize } from '@interface/enums';
   styleUrl: './box-button.component.scss',
 })
 export class BoxButtonComponent {
-  readonly text = input<string | undefined>('');
+  readonly text = input<string | undefined | number>('');
   readonly typeControl = input.required<BoxButtonType>();
   readonly sizeControl = input<BoxButtonSize>();
   readonly disabled = input<boolean>(false);

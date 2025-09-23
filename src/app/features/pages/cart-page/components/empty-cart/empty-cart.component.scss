@@ -1,0 +1,8 @@
+@use 'utils';
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(12px);
+  max-width: utils.pxToRem(250px);
+  margin: 0 auto;
+}

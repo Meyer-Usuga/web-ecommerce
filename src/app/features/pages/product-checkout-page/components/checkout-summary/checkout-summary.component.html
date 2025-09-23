@@ -35,7 +35,7 @@
     <hr />
     <div class="summary__data--block">
       <p>Subtotal</p>
-      <span>$ {{ totalProducts() | currency : 'COP' : '' }} </span>
+      <span>$ {{ total() | currency : 'COP' : '' }} </span>
     </div>
     <div class="summary__data--block shipping">
       <p>Shipping</p>
@@ -44,7 +44,7 @@
     <hr />
     <div class="summary__data--block">
       <p>Total</p>
-      <span>${{ totalProducts() | currency : 'COP' : '' }}</span>
+      <span>${{ total() | currency : 'COP' : '' }}</span>
     </div>
   </div>
 </aside>

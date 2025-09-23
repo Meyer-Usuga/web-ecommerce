@@ -17,7 +17,8 @@
   cursor: pointer;
 
   //types
-  &.button {
+  &.button,
+  &.submit {
     background-color: transparent;
     padding: 0;
   }

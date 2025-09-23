@@ -4,7 +4,12 @@
     <h1>VERIFICAR</h1>
 
     <app-steps [steps]="listSteps">
-      <form class="form" [formGroup]="checkoutForm" content>
+      <form
+        class="form"
+        [formGroup]="checkoutForm"
+        (ngSubmit)="submit()"
+        content
+      >
         <app-checkout-data-form
           [form]="getForm('customer')"
           [class.inactive]="!listSteps[0].active"
@@ -32,10 +37,10 @@
             [text]="
               currentStepIndex === listSteps.length - 1
                 ? 'Pagar'
-                : 'Continuar envío ⟶'
+                : 'Continuar ⟶'
             "
             [sizeControl]="sizeControl.LARGE"
-            [typeControl]="typeControl.BUTTON"
+            [typeControl]="typeControl.SUBMIT"
             (onClick)="nextStep()"
             class="next"
           />
