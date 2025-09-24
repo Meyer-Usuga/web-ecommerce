@@ -21,7 +21,7 @@ export class CollectionsComponent {
         description: {
           title: 'V-Neck T-Shirt',
           subtitle: 'Embroidered Seersucker Shirt',
-          price: '99',
+          price: '99000',
         },
       },
     },
@@ -36,7 +36,7 @@ export class CollectionsComponent {
         description: {
           title: 'V-Neck T-Shirt',
           subtitle: 'Embroidered Seersucker Shirt',
-          price: '99',
+          price: '99000',
         },
       },
     },
@@ -51,7 +51,7 @@ export class CollectionsComponent {
         description: {
           title: 'V-Neck T-Shirt',
           subtitle: 'Embroidered Seersucker Shirt',
-          price: '99',
+          price: '99000',
         },
       },
     },

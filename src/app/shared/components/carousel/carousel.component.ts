@@ -32,7 +32,7 @@ export class CarouselComponent implements AfterViewInit {
       description: {
         title: 'V-Neck T-Shirt',
         subtitle: 'Embroidered Seersucker Shirt',
-        price: '99',
+        price: '99000',
       },
       collection: 'camisas',
       special: null,
@@ -48,7 +48,7 @@ export class CarouselComponent implements AfterViewInit {
       description: {
         title: 'Cotton T Shirt',
         subtitle: 'Basic Slim Fit T-Shirt',
-        price: '99',
+        price: '99000',
       },
       collection: 'buzos',
       special: 'descuento',
@@ -64,7 +64,7 @@ export class CarouselComponent implements AfterViewInit {
       description: {
         title: 'Henley T-Shirt',
         subtitle: 'Blurred Print T-Shirt',
-        price: '99',
+        price: '99000',
       },
       collection: 'polos',
       special: 'edicion_limitada',
@@ -80,7 +80,7 @@ export class CarouselComponent implements AfterViewInit {
       description: {
         title: 'Crewneck T-Shirt',
         subtitle: 'Full Sleeve Zipper',
-        price: '99',
+        price: '99000',
       },
       collection: 'chaquetas',
       special: 'proximamente',
@@ -96,7 +96,7 @@ export class CarouselComponent implements AfterViewInit {
       description: {
         title: 'Crewneck T-Shirt',
         subtitle: 'Full Sleeve Zipper',
-        price: '99',
+        price: '99000',
       },
       collection: 'pantalones',
       special: null,
