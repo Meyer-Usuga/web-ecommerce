@@ -5,7 +5,7 @@
   <div class="simple-review__content">
     <h3>{{ review().user }}</h3>
     <p>{{ review().content }}</p>
-    <h4>{{ review().date.toLocaleDateString("es-CO") }}</h4>
+    <h4>{{ review().date.toLocaleDateString('es-CO') }}</h4>
 
     <div class="stars">
       @for (i of [].constructor(review().stars); track index; let index =

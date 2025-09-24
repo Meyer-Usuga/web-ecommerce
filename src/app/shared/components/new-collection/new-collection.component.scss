@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .new-collection {
   display: grid;
@@ -6,6 +6,10 @@
   grid-template-columns: 420px 1fr;
   overflow: hidden;
   @include utils.container();
+
+  @include utils.media-ltmd() {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -23,5 +27,9 @@
       display: flex;
       gap: utils.pxToRem(8px);
     }
+  }
+
+  h1 {
+    font-size: clamp(20px, 2vw, 32px);
   }
 }

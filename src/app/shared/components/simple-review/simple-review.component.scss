@@ -1,10 +1,9 @@
-@use "utils";
+@use 'utils';
 
 .simple-review {
   display: flex;
   align-items: start;
   gap: utils.pxToRem(16px);
-  width: 100%;
   background: utils.$color-gray-light-2;
   padding: utils.pxToRem(16px);
   border-radius: utils.pxToRem(16px);
@@ -18,9 +17,14 @@
     padding: utils.pxToRem(8px);
 
     img {
-      width: utils.pxToRem(40px);
-      height: utils.pxToRem(40px);
+      width: utils.pxToRem(30px);
+      height: utils.pxToRem(30px);
       object-fit: contain;
+
+      @include utils.media-ltmd() {
+        width: utils.pxToRem(20px);
+        height: utils.pxToRem(20px);
+      }
     }
   }
 
@@ -29,10 +33,15 @@
     flex-direction: column;
     justify-content: center;
     gap: utils.pxToRem(8px);
-    max-width: utils.pxToRem(1000px);
 
     h3 {
       font-weight: 500;
+      font-size: clamp(16px, 2vw, 18px);
+    }
+
+    p,
+    h4 {
+      font-size: clamp(14px, 2vw, 16px);
     }
   }
 }

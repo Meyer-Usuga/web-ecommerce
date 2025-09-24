@@ -1,11 +1,13 @@
-@use "utils";
+@use 'utils';
 
 .reviews {
   display: flex;
   flex-direction: column;
   gap: utils.pxToRem(24px);
+  @include utils.container();
 
   h1 {
     margin-bottom: utils.pxToRem(16px);
+    font-size: clamp(20px, 2vw, 32px);
   }
 }

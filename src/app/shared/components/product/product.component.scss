@@ -28,6 +28,18 @@
       flex-direction: row;
       justify-content: space-between;
       font-weight: 500;
+
+      @include utils.media-ltlg() {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      p {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        flex: 1;
+      }
     }
 
     .colors {
@@ -91,8 +103,28 @@
       }
     }
 
+    @include utils.media-xs() {
+      height: min(200px, 80vh);
+    }
+
+    @include utils.media-sm() {
+      height: min(200px, 80vh);
+    }
+
+    @include utils.media-md() {
+      height: min(250px, 80vh);
+    }
+
+    @include utils.media-lg() {
+      height: min(280px, 80vh);
+    }
+
     &:hover {
       border: 1px solid utils.$color-gray-dark;
     }
+  }
+
+  p {
+    font-size: clamp(14px, 2vw, 16px);
   }
 }

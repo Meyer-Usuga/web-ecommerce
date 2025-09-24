@@ -1,16 +1,24 @@
-@use "utils";
+@use 'utils';
 
 .footer {
   margin-top: utils.pxToRem(100px);
   background-color: utils.$color-white;
+  font-size: clamp(14px, 2vw, 16px);
 
   &__wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    padding: utils.pxToRem(48px);
+    justify-content: space-between;
     align-items: center;
-    height: 50vh;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr auto;
     @include utils.container();
+
+    @include utils.media-xs() {
+      flex-direction: column;
+      gap: utils.pxToRem(32px);
+      padding: utils.pxToRem(16px);
+      align-items: flex-start;
+    }
   }
 
   .list {
@@ -21,5 +29,9 @@
     small {
       font-weight: 500;
     }
+  }
+
+  img {
+    width: clamp(30px, 20vw, 130px);
   }
 }

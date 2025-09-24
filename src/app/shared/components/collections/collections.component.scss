@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .collections {
   display: flex;
@@ -29,6 +29,12 @@
     display: grid;
     gap: utils.pxToRem(32px);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    @include utils.media-xs() {
+      gap: utils.pxToRem(32px);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+      place-self: center;
+    }
   }
 
   &__more {
@@ -44,5 +50,9 @@
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  h1 {
+    font-size: clamp(20px, 2vw, 32px);
   }
 }

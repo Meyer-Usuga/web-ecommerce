@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .carousel {
   position: relative;
@@ -24,7 +24,8 @@
 
     > * {
       flex: 0 0 auto;
-      min-width: utils.pxToRem(240px);
+      width: auto;
+      min-width: unset;
     }
   }
 

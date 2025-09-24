@@ -37,7 +37,7 @@ body {
     list-style: none;
   }
 
-  input {
+  .input-standard {
     padding: utils.pxToRem(12px) utils.pxToRem(20px);
     border: 1px solid utils.$color-gray-light;
     font-size: utils.pxToRem(14px);

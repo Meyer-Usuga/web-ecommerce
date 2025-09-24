@@ -3,10 +3,13 @@
 .sidebar-filters {
   width: 100%;
   max-width: 800px;
+  height: 600px;
+  overflow-y: auto;
   display: flex;
   gap: utils.pxToRem(16px);
   flex-direction: column;
   padding: utils.pxToRem(16px);
+  scrollbar-width: none;
 
   .sizes {
     display: flex;
