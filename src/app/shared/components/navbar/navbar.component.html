@@ -34,4 +34,13 @@
 <app-sidebar
   [openSidebar]="stateSidebar()"
   (closeSidebar)="stateSidebar.set(false)"
-/>
+>
+  <div class="sidebar" sidebar-content>
+    <ul>
+      <li [routerLink]="['/']">Inicio</li>
+      <li [routerLink]="['/productos', 'nuevo']">Nuevo</li>
+      <li [routerLink]="['/productos', 'hombre']">Hombre</li>
+      <li [routerLink]="['/productos', 'mujer']">Mujer</li>
+    </ul>
+  </div>
+</app-sidebar>

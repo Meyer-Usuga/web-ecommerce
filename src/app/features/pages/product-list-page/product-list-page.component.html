@@ -5,9 +5,29 @@
     <app-sidebar-filters (selectedFilter)="onSelectFilter($event)" />
   </aside>
 
+  <app-sidebar
+    themeSidebar="light"
+    [openSidebar]="stateSidebar()"
+    (closeSidebar)="stateSidebar.set(false)"
+  >
+    <app-sidebar-filters
+      (selectedFilter)="onSelectFilter($event)"
+      sidebar-content
+    />
+  </app-sidebar>
+
   <div class="content">
     <app-breadcrumb />
-    <h1>Productos ({{ products().length }})</h1>
+
+    <div class="content__header">
+      <h1>Productos ({{ products().length }})</h1>
+      <app-button
+        type="iconText"
+        icon="filters.svg"
+        text="Filtros"
+        (onClick)="toggleSidebar()"
+      />
+    </div>
 
     <div class="content__boxs">
       <app-search-input

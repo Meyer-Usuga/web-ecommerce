@@ -8,21 +8,17 @@ import {
   signal,
   ViewChild,
 } from '@angular/core';
-import { SidebarFiltersComponent } from '@feature/pages/product-list-page/components';
-import { FilterValue } from '@interface/interfaces';
-import { FiltersService } from '@interface/services';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [SidebarFiltersComponent],
+  imports: [],
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
   @ViewChild('sidebar') sidebarRef!: ElementRef;
-
-  readonly #filtersService = inject(FiltersService);
+  readonly themeSidebar = input<'dark' | 'light'>('dark');
   readonly openSidebar = input<boolean>();
   readonly closeSidebar = output<void>();
 
@@ -36,9 +32,5 @@ export class SidebarComponent {
     if (!clickInSide && this.openSidebar()) {
       this.closeSidebar.emit();
     }
-  }
-
-  onSelectFilter(filter: FilterValue) {
-    this.#filtersService.updateQueryParams(filter);
   }
 }

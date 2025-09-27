@@ -10,6 +10,8 @@ import { Filters, FilterValue } from '@interface/interfaces';
 import { ProductComponent } from '@shared/product';
 import { FiltersService } from '@services/filters.service';
 import { Router } from '@angular/router';
+import { ButtonComponent } from '@shared/button';
+import { SidebarComponent } from '../../../shared/components/sidebar/sidebar.component';
 @Component({
   selector: 'app-product-list-page',
   imports: [
@@ -20,6 +22,8 @@ import { Router } from '@angular/router';
     BreadcrumbComponent,
     BoxButtonComponent,
     ProductComponent,
+    ButtonComponent,
+    SidebarComponent,
   ],
   standalone: true,
   templateUrl: './product-list-page.component.html',
@@ -31,6 +35,7 @@ export class ProductListPageComponent {
 
   readonly typeControl = BoxButtonType;
   readonly sizeControl = BoxButtonSize;
+  readonly stateSidebar = signal(false);
 
   readonly filters = signal<Filters>(this.#filtersService.filters);
 
@@ -62,5 +67,9 @@ export class ProductListPageComponent {
     this.#router.navigate(['/productos/detalle', productId], {
       queryParamsHandling: 'preserve',
     });
+  }
+
+  toggleSidebar() {
+    this.stateSidebar.update((state) => !state);
   }
 }

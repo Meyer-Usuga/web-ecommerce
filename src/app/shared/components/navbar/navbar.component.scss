@@ -47,3 +47,19 @@
     }
   }
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(24px);
+  color: utils.$color-white;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: utils.pxToRem(12px);
+    list-style: none;
+    font-size: utils.pxToRem(24px);
+    padding-left: utils.pxToRem(16px);
+  }
+}

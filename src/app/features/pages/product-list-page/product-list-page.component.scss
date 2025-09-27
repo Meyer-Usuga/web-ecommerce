@@ -26,6 +26,22 @@
     flex-direction: column;
     gap: utils.pxToRem(12px);
 
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      app-button {
+        display: none;
+      }
+
+      @include utils.media-ltmd() {
+        app-button {
+          display: block;
+        }
+      }
+    }
+
     &__boxs {
       gap: utils.pxToRem(32px);
       display: grid;

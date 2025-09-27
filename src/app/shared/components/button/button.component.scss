@@ -32,6 +32,7 @@
   }
 
   &.iconText {
+    width: 100%;
     gap: utils.pxToRem(10px);
     border-radius: utils.pxToRem(16px);
     background-color: utils.$color-bg;
