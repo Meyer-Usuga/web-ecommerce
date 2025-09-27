@@ -1,12 +1,11 @@
 @use 'utils';
 
 .input-wrapper {
-  width: 100%;
   display: flex;
   align-items: center;
   gap: utils.pxToRem(12px);
   justify-content: space-between;
-  max-width: utils.pxToRem(460px);
+  max-width: utils.pxToRem(860px);
   min-height: utils.pxToRem(35px);
   padding: utils.pxToRem(8px);
   border-radius: utils.pxToRem(4px);

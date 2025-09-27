@@ -6,11 +6,19 @@
   gap: utils.pxToRem(30px);
   @include utils.container();
 
+  @include utils.media-ltlg() {
+    grid-template-columns: 1fr;
+  }
+
   .filters {
     position: sticky;
     align-self: flex-start;
     top: utils.pxToRem(60px);
     margin-top: utils.pxToRem(60px);
+
+    @include utils.media-ltlg() {
+      display: none;
+    }
   }
 
   .content {
@@ -38,7 +46,7 @@
       }
 
       @include utils.media-ltlg() {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
 
@@ -50,8 +58,12 @@
       justify-content: center;
       overflow: hidden;
 
-      @include utils.media-ltlg() {
-        grid-template-columns: 200px 200px;
+      @include utils.media-ltmd() {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include utils.media-lg() {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       @include utils.media-lg() {

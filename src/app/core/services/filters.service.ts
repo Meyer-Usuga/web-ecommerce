@@ -107,7 +107,13 @@ export class FiltersService {
     ],
   };
 
-  readonly #singleValueParams = ['especial', 'busqueda'];
+  readonly #singleValueParams = [
+    'especial',
+    'busqueda',
+    'disponibilidad',
+    'precio',
+    'calificacion',
+  ];
 
   readonly #products: Product[] = [
     {

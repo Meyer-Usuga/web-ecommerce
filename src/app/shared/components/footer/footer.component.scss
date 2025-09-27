@@ -8,15 +8,16 @@
   &__wrapper {
     display: flex;
     flex-direction: row;
-    padding: utils.pxToRem(48px);
     justify-content: space-between;
     align-items: center;
+    padding-top: utils.pxToRem(20px);
+    padding-bottom: utils.pxToRem(20px);
     @include utils.container();
 
     @include utils.media-xs() {
       flex-direction: column;
       gap: utils.pxToRem(32px);
-      padding: utils.pxToRem(16px);
+      padding: 0;
       align-items: flex-start;
     }
   }

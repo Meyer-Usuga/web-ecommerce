@@ -3,10 +3,5 @@
     <button class="sidebar__close" (click)="toggleSidebar()">×</button>
   </div>
 
-  <ul class="sidebar__menu">
-    <li>Inicio</li>
-    <li>Nuevo</li>
-    <li>Hombre</li>
-    <li>Mujer</li>
-  </ul>
+  <app-sidebar-filters (selectedFilter)="onSelectFilter($event)" />
 </aside>

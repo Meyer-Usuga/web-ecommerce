@@ -36,6 +36,10 @@
     padding: 0 utils.pxToRem(50px);
     background-color: transparent;
     height: utils.pxToRem(49px);
+
+    @include utils.media-ltmd() {
+      height: utils.pxToRem(40px);
+    }
   }
 
   &.large {

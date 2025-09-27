@@ -1,4 +1,4 @@
-@use "utils";
+@use 'utils';
 
 .navbar {
   display: flex;
@@ -12,6 +12,11 @@
 
   &__toggle {
     cursor: pointer;
+    pointer-events: none;
+
+    @include utils.media-ltlg() {
+      pointer-events: auto;
+    }
   }
 
   &__list {
