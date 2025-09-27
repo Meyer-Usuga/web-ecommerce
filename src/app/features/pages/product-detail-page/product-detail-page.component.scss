@@ -9,10 +9,11 @@
   height: 80vh;
   @include utils.container();
 
-  @include utils.media-ltlg() {
+  @include utils.media-ltmd() {
     flex-direction: column;
     height: auto;
-    gap: utils.pxToRem(40px);
+    gap: utils.pxToRem(20px);
+    margin-bottom: utils.pxToRem(40px);
   }
 
   &__filters {

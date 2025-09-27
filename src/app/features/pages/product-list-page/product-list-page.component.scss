@@ -10,6 +10,14 @@
     grid-template-columns: 1fr;
   }
 
+  app-sidebar {
+    display: none;
+
+    @include utils.media-ltlg() {
+      display: block;
+    }
+  }
+
   .filters {
     position: sticky;
     align-self: flex-start;

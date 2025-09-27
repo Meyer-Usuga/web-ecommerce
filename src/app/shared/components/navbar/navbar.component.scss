@@ -14,7 +14,7 @@
     cursor: pointer;
     pointer-events: none;
 
-    @include utils.media-ltlg() {
+    @include utils.media-ltmd() {
       pointer-events: auto;
     }
   }
