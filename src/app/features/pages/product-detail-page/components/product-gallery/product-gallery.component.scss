@@ -5,15 +5,24 @@
   gap: utils.pxToRem(32px);
   align-items: center;
 
+  @include utils.media-ltlg() {
+    flex-direction: column;
+    margin-top: utils.pxToRem(20px);
+  }
+
   &__sample {
     width: 100%;
-    height: utils.pxToRem(450px);
+    height: 100%;
     max-width: utils.pxToRem(500px);
     border: 1px solid utils.$color-gray-light;
 
+    @include utils.media-ltlg() {
+      max-width: utils.pxToRem(350px);
+    }
+
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
     }
   }
@@ -22,6 +31,10 @@
     display: flex;
     gap: utils.pxToRem(32px);
     flex-direction: column;
+
+    @include utils.media-ltlg() {
+      flex-direction: row;
+    }
 
     .block {
       opacity: 0.6;
