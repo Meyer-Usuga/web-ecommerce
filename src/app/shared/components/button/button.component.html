@@ -3,7 +3,10 @@
   [ngStyle]="customStyles()"
   (click)="handleClickButton()"
 >
-  @if(icon() && icon() !== ""){
+  @if(type() === 'iconText' && icon() && icon() !== ""){
+  <img [src]="icon()" alt="Web icon" height="15px" width="15px" />
+  <span>{{ text() }}</span>
+  } @else if(icon() && icon() !== ""){
   <img [src]="icon()" alt="Web icon" height="15px" width="15px" />
   } @else {
   {{ text() }}

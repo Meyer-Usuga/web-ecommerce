@@ -21,8 +21,9 @@
   <div class="navbar__buttons">
     <app-button icon="favorite.svg" type="primary" />
     <app-button
-      text="Carrito"
-      type="primary"
+      icon="cart.svg"
+      type="iconText"
+      [text]="cartSize().toString()"
       [customStyles]="cartButtonStyles"
       routerLink="/carrito"
     />

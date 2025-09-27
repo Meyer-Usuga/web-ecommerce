@@ -30,4 +30,19 @@
   &.bottomless {
     background-color: transparent;
   }
+
+  &.iconText {
+    gap: utils.pxToRem(10px);
+    border-radius: utils.pxToRem(16px);
+    background-color: utils.$color-bg;
+
+    span {
+      margin-right: utils.pxToRem(4px);
+    }
+
+    img {
+      height: utils.pxToRem(28px);
+      width: utils.pxToRem(28px);
+    }
+  }
 }

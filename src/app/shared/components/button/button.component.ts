@@ -1,7 +1,7 @@
 import { NgStyle } from '@angular/common';
 import { Component, input, output } from '@angular/core';
 
-type InputType = 'primary' | 'secondary' | 'underline' | 'bottomless';
+type InputType = 'primary' | 'secondary' | 'iconText' | 'bottomless';
 
 @Component({
   selector: 'app-button',

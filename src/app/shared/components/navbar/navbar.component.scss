@@ -42,8 +42,7 @@
   }
 
   @include utils.media-ltmd() {
-    &__items,
-    &__buttons {
+    &__items {
       display: none;
     }
   }
