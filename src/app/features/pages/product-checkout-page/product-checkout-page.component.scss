@@ -5,7 +5,15 @@
   justify-content: space-between;
   margin-top: utils.pxToRem(20px);
   margin-bottom: utils.pxToRem(40px);
+  gap: utils.pxToRem(32px);
   @include utils.container();
+
+  @include utils.media-ltmd {
+    flex-direction: column;
+    align-items: center;
+    margin-top: utils.pxToRem(10px);
+    margin-bottom: utils.pxToRem(20px);
+  }
 
   &__data {
     display: flex;

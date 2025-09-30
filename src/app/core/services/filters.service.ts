@@ -191,7 +191,7 @@ export class FiltersService {
       alt: 'Nuevo articulo de la semana',
       description: {
         title: 'Henley T-Shirt',
-        subtitle: 'Blurred Print T-Shirt',
+        subtitle: 'Blurred Print',
         price: '180000',
       },
       size: ['XS', 'S', '2X'],

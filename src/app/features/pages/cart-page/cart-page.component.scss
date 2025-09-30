@@ -6,6 +6,12 @@
   &__shopping {
     display: flex;
     justify-content: space-between;
+    gap: utils.pxToRem(32px);
+
+    @include utils.media-ltmd() {
+      flex-direction: column;
+      align-items: center;
+    }
 
     &--items {
       display: grid;
@@ -21,6 +27,15 @@
         display: flex;
         gap: utils.pxToRem(8px);
         align-items: center;
+        justify-content: center;
+      }
+
+      @include utils.media-ltlg() {
+        max-width: utils.pxToRem(300px);
+      }
+
+      @include utils.media-lg() {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
       }
     }
 
@@ -33,6 +48,13 @@
       padding: 0 utils.pxToRem(48px) 0 utils.pxToRem(48px);
       gap: utils.pxToRem(24px);
       max-height: utils.pxToRem(450px);
+      margin-bottom: utils.pxToRem(32px);
+
+      @include utils.media-xs() {
+        padding: utils.pxToRem(32px) utils.pxToRem(28px) utils.pxToRem(32px)
+          utils.pxToRem(28px);
+        max-width: utils.pxToRem(250px);
+      }
     }
   }
 
