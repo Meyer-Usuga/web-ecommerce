@@ -55,4 +55,8 @@
   &.disabled {
     background-color: utils.$color-gray-light !important;
   }
+
+  &:hover {
+    border: 1px solid utils.$color-bg;
+  }
 }
