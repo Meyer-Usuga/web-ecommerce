@@ -3,10 +3,16 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { TransformProductImagePipe } from '@interface/pipes';
 import { CartService } from '@interface/services';
 import { ButtonComponent } from '@shared/button';
+import { ImageComponent } from '@shared/image';
 
 @Component({
   selector: 'app-checkout-summary',
-  imports: [TransformProductImagePipe, ButtonComponent, CurrencyPipe],
+  imports: [
+    TransformProductImagePipe,
+    ButtonComponent,
+    CurrencyPipe,
+    ImageComponent,
+  ],
   standalone: true,
   templateUrl: './checkout-summary.component.html',
   styleUrl: './checkout-summary.component.scss',

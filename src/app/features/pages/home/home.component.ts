@@ -8,6 +8,7 @@ import { NewThisWeekComponent } from '@shared/new-this-week';
 import { CollectionsComponent } from '@shared/collections';
 import { NewCollectionComponent } from '@shared/new-collection';
 import { ReviewsComponent } from '@shared/reviews';
+import { ImageComponent } from '@shared/image';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ import { ReviewsComponent } from '@shared/reviews';
     ReviewsComponent,
     NewThisWeekComponent,
     NewCollectionComponent,
+    ImageComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

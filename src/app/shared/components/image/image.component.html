@@ -1,0 +1,10 @@
+@if(!isLoaded()){
+<span class="skeleton" aria-hidden="true"></span>
+}
+<img
+  #image
+  [src]="src()"
+  [alt]="alt()"
+  [class.loaded]="isLoaded()"
+  (load)="onLoad()"
+/>

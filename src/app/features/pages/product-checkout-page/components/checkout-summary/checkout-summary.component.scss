@@ -73,13 +73,10 @@
     position: relative;
 
     &--image {
-      max-width: utils.pxToRem(100px);
+      flex-shrink: 0;
+      width: utils.pxToRem(100px);
+      aspect-ratio: 1 / 1;
       border: 1px solid utils.$color-gray-light;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
     }
 
     &--remove {

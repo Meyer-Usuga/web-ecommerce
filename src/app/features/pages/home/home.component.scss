@@ -92,17 +92,14 @@
       max-height: utils.pxToRem(400px);
       width: 100%;
       height: 100%;
+      aspect-ratio: 3 / 4;
 
       @include utils.media-ltlg() {
         max-width: utils.pxToRem(250px);
         max-height: utils.pxToRem(300px);
       }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+      app-image {
         transition: transform 0.3s ease;
       }
     }
