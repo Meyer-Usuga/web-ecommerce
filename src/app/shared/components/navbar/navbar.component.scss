@@ -22,7 +22,7 @@
   &__list {
     display: flex;
     align-items: center;
-    font-weight: 500;
+    @include utils.text-nav;
   }
 
   &__items {

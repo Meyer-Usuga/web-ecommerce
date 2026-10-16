@@ -43,7 +43,6 @@
   }
 
   h2 {
-    font-weight: 500;
-    font-size: utils.pxToRem(16px);
+    @include utils.text-subheading;
   }
 }

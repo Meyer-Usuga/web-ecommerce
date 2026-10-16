@@ -8,6 +8,6 @@
 
   h1 {
     margin-bottom: utils.pxToRem(16px);
-    font-size: clamp(20px, 2vw, 32px);
+    @include utils.text-display;
   }
 }

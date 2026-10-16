@@ -1,0 +1,38 @@
+/*
+ * Tipografía basada en el UI Kit de Figma "Cloth Store" (Beatrice Deck).
+ * Beatrice Deck es una fuente comercial (Sharp Type); mientras no se tenga la
+ * licencia web se usa Archivo expandida (Google Fonts), que es la alternativa
+ * libre más cercana. Para cambiarla basta con actualizar $font-family-base y
+ * el <link> de src/index.html.
+ */
+$font-family-base: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+
+/* Ancho de la fuente (eje wdth de Archivo) para imitar a Beatrice Deck */
+$font-stretch-base: 112.5%;
+$font-stretch-display: 125%;
+
+/* Pesos */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+/* Tamaños (px del diseño, se convierten a rem en los mixins) */
+$font-size-display: 48px;
+$font-size-title: 20px;
+$font-size-lg: 16px;
+$font-size-md: 14px;
+$font-size-sm: 12px;
+$font-size-xs: 10px;
+
+/* Espaciado entre letras */
+$letter-spacing-wide: 2px;
+$letter-spacing-normal: 1px;
+
+/* Colores de texto */
+$color-text: #000000;
+$color-text-muted: rgba(0, 0, 0, 0.66);
+$color-text-subtle: #5e5e5e;
+$color-text-disabled: #8a8a8a;
+$color-text-accent: #000e8a;

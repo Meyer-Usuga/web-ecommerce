@@ -3,13 +3,14 @@
 .sidebar-filters {
   width: 100%;
   max-width: 800px;
-  height: 600px;
+  max-height: calc(100dvh - #{utils.pxToRem(80px)});
   overflow-y: auto;
+  box-sizing: border-box;
   display: flex;
   gap: utils.pxToRem(16px);
   flex-direction: column;
   padding: utils.pxToRem(16px);
-  scrollbar-width: none;
+  scrollbar-width: thin;
 
   .sizes {
     display: flex;
@@ -31,18 +32,16 @@
   }
 
   h1 {
-    font-weight: 500;
-    font-size: utils.pxToRem(18px);
+    @include utils.text-heading;
   }
 
   h2 {
-    font-weight: 500;
-    font-size: utils.pxToRem(16px);
+    @include utils.text-subheading;
   }
 
   p {
-    font-weight: normal;
-    font-size: utils.pxToRem(14px);
+    @include utils.text-caption;
+    color: utils.$color-text;
   }
 
   .flex-group {

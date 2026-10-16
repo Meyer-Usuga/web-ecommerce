@@ -1,12 +1,14 @@
 @use "utils";
 
 .breadcrumbs {
+  @include utils.text-caption;
+
   a {
     text-decoration: none;
-    color: utils.$color-bg;
+    color: utils.$color-text-muted;
 
     &.active {
-      font-weight: 500;
+      color: utils.$color-text;
     }
   }
 }

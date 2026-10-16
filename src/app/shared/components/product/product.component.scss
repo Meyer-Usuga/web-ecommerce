@@ -22,12 +22,16 @@
       width: 100%;
     }
 
+    .description p {
+      @include utils.text-caption;
+    }
+
     .price {
       display: flex;
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      font-weight: 500;
+      @include utils.text-label;
 
       @include utils.media-ltlg() {
         flex-direction: column;
@@ -115,9 +119,5 @@
     &:hover {
       border: 1px solid utils.$color-gray-dark;
     }
-  }
-
-  p {
-    font-size: clamp(14px, 2vw, 16px);
   }
 }

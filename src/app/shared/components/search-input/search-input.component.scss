@@ -19,7 +19,8 @@
     border: none;
     outline: none;
     flex: 1;
-    font-size: utils.pxToRem(16px);
+    @include utils.text-caption;
+    color: utils.$color-text;
     background-color: transparent;
   }
 }

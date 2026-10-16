@@ -102,6 +102,6 @@
   }
 
   h1 {
-    font-size: utils.pxToRem(24px);
+    @include utils.text-title;
   }
 }

@@ -6,6 +6,7 @@
   @include utils.container();
 
   &__categories {
+    @include utils.text-body;
     display: flex;
     flex-direction: column;
     gap: utils.pxToRem(12px);
@@ -123,11 +124,13 @@
     justify-content: space-between;
   }
 
-  h1 {
-    font-size: clamp(20px, 2vw, 32px);
-  }
+  &__banner {
+    h1 {
+      @include utils.text-banner;
+    }
 
-  p {
-    font-size: clamp(14px, 2vw, 16px);
+    p {
+      @include utils.text-paragraph;
+    }
   }
 }

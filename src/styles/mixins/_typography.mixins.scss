@@ -1,0 +1,88 @@
+@use "../variables/typography.variables" as type;
+@use "../functions/unit-conversion" as units;
+
+/* NEW COLLECTION, NEW THIS WEEK, XIV COLLECTIONS */
+@mixin text-display {
+  font-size: clamp(28px, 4vw, units.pxToRem(type.$font-size-display));
+  font-weight: type.$font-weight-extrabold;
+  font-stretch: type.$font-stretch-display;
+  line-height: 0.85;
+  letter-spacing: type.$letter-spacing-wide;
+  text-transform: uppercase;
+}
+
+/* OUR APPROACH TO FASHION DESIGN */
+@mixin text-banner {
+  font-size: clamp(24px, 4vw, units.pxToRem(type.$font-size-display));
+  font-weight: type.$font-weight-regular;
+  font-stretch: type.$font-stretch-display;
+  line-height: 1;
+  letter-spacing: type.$letter-spacing-wide;
+  text-transform: uppercase;
+}
+
+/* PRODUCTS (título de página) */
+@mixin text-title {
+  font-size: units.pxToRem(type.$font-size-title);
+  font-weight: type.$font-weight-bold;
+  letter-spacing: type.$letter-spacing-normal;
+  text-transform: uppercase;
+}
+
+/* Filters */
+@mixin text-heading {
+  font-size: units.pxToRem(type.$font-size-lg);
+  font-weight: type.$font-weight-bold;
+  letter-spacing: type.$letter-spacing-wide;
+}
+
+/* Size, Availability, Category... */
+@mixin text-subheading {
+  font-size: units.pxToRem(type.$font-size-md);
+  font-weight: type.$font-weight-bold;
+  letter-spacing: type.$letter-spacing-wide;
+}
+
+/* Home, Collections, New */
+@mixin text-nav {
+  font-size: units.pxToRem(type.$font-size-lg);
+  font-weight: type.$font-weight-medium;
+  letter-spacing: type.$letter-spacing-wide;
+}
+
+/* MEN WOMEN KIDS, Summer 2024 */
+@mixin text-body {
+  font-size: units.pxToRem(type.$font-size-lg);
+  font-weight: type.$font-weight-regular;
+  letter-spacing: type.$letter-spacing-wide;
+}
+
+/* Párrafos largos */
+@mixin text-paragraph {
+  font-size: units.pxToRem(type.$font-size-lg);
+  font-weight: type.$font-weight-light;
+  line-height: 1.5;
+  letter-spacing: type.$letter-spacing-wide;
+}
+
+/* Nombre y precio de producto, botones */
+@mixin text-label {
+  font-size: units.pxToRem(type.$font-size-md);
+  font-weight: type.$font-weight-medium;
+  letter-spacing: 0;
+}
+
+/* Categoría del producto, breadcrumb, placeholder de búsqueda */
+@mixin text-caption {
+  font-size: units.pxToRem(type.$font-size-sm);
+  font-weight: type.$font-weight-medium;
+  letter-spacing: type.$letter-spacing-normal;
+  color: type.$color-text-muted;
+}
+
+/* Chips de filtros (NEW, SHIRTS...) */
+@mixin text-tag {
+  font-size: units.pxToRem(type.$font-size-xs);
+  font-weight: type.$font-weight-regular;
+  text-transform: uppercase;
+}

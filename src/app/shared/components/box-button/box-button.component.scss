@@ -2,8 +2,7 @@
 
 .control-button {
   border: none;
-  font-weight: 500;
-  font-size: utils.pxToRem(14px);
+  @include utils.text-label;
   width: utils.pxToRem(35px);
   height: utils.pxToRem(35px);
   text-decoration: none;
